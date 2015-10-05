@@ -1,0 +1,53 @@
+{
+    "name": "Feel The Real",
+    "version": 0.1,
+    "debug": false,
+
+    "articles": [
+
+        {
+            "id": 1,
+            "date": "30.07.2015",
+            "title": "House of the flying people",
+            "content": [
+                '<div class="info_content">' +
+                '<h3>A new style of people</h3>' +
+                '<p>The London Eye is a giant Ferris wheel situated on the banks of the River Thames. The entire structure is 135 metres (443 ft) tall and the wheel has a diameter of 120 metres (394 ft).</p>' +
+                '</div>'
+            ],
+            "thumbnail": "",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "position": [
+                51.503454,-0.119562
+            ],
+            "country": "Austria"
+        },
+        {
+            "id": 2,
+            "date": "04.08.2015",
+            "title": "Dark Ice Caves",
+            "content": [
+                '<div class="info_content">' +
+                '<h3>Cold & Deep</h3>' +
+                '<p>The London Eye is a giant Ferris wheel situated on the banks of the River Thames. The entire structure is 135 metres (443 ft) tall and the wheel has a diameter of 120 metres (394 ft).</p>' +
+                '</div>'
+            ],
+            "thumbnail": "",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "position": [
+                51.499633,-0.124755
+            ],
+            "country": "Austria"
+        }
+
+
+    ]
+}

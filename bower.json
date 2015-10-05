@@ -1,0 +1,24 @@
+{
+  "name": "CorentinFlach",
+  "version": "0.1.0",
+  "authors": [
+    "Muini <corentin.flach@gmail.com>"
+  ],
+  "moduleType": [
+    "amd",
+    "es6",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.4",
+    "normalize.css": "~3.0.3"
+  }
+}
