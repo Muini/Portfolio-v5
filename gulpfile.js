@@ -75,7 +75,7 @@ gulp.task('scripts', function() {
 
 gulp.task('html', function() {
     var task = gulp.src(conf.paths.app + '/index.php')
-    //.pipe(include())
+    .pipe(include())
     .pipe(sourcemaps.init())
     .pipe(concat('index.php'))
     .pipe(sourcemaps.write())
@@ -179,13 +179,14 @@ gulp.task('serve', ['styles', 'scripts', 'html'], function () {
 /* Copy important files into the dist folder */
 gulp.task('copy', function() {
   return gulp.src([
-      conf.paths.app + '/*',
-      conf.paths.app + '/inc/*.php',
-      '!' + conf.paths.app + '/*.html',
-      '!' + conf.paths.app + '/*.css',
-      '!' + conf.paths.app + '/*.js',
-      //'!' + conf.paths.app + '/*.php',
-      '!' + conf.paths.app + '/bower_components'
+      conf.paths.app + '/**',
+      '!' + conf.paths.app + '/styles',
+      '!' + conf.paths.app + '/styles/**',
+      '!' + conf.paths.app + '/scripts',
+      '!' + conf.paths.app + '/scripts/**',
+      '!' + conf.paths.app + '/**/*.gitkeep',
+      '!' + conf.paths.app + '/bower_components',
+      '!' + conf.paths.app + '/bower_components/**'
     ], { dot: true })
   .pipe(gulp.dest(conf.paths.dist));
 });

@@ -1,7 +1,7 @@
 
-   <?php include('header-html.php') ?>
+   <?php include('inc/header-html.php') ?>
 
-   <?php include('header-main.php') ?>
+   <?php include('inc/header-main.php') ?>
 
 
     <div class="container">
@@ -25,8 +25,8 @@
     </div>
 
 
-   <?php include('footer-main.php') ?>
+   <?php include('inc/footer-main.php') ?>
 
-   <?php include('footer-html.php') ?>
+   <?php include('inc/footer-html.php') ?>
 
 
