@@ -3,17 +3,14 @@
     "version": 0.1,
     "debug": false,
 
-    "articles": [
+    "projects": [
 
         {
             "id": 1,
-            "date": "30.07.2015",
-            "title": "House of the flying people",
-            "content": [
-                '<div class="info_content">' +
-                '<h3>A new style of people</h3>' +
-                '<p>The London Eye is a giant Ferris wheel situated on the banks of the River Thames. The entire structure is 135 metres (443 ft) tall and the wheel has a diameter of 120 metres (394 ft).</p>' +
-                '</div>'
+            "date": "2015",
+            "title": "Portfolio 2015",
+            "desc": [
+                ""
             ],
             "thumbnail": "",
             "videoSrc": "",
@@ -21,20 +18,16 @@
                 "",
                 ""
             ],
-            "position": [
-                51.503454,-0.119562
-            ],
-            "country": "Austria"
+            "url": "",
+            "size": "1x1",
+            "category": "dev"
         },
         {
             "id": 2,
-            "date": "04.08.2015",
-            "title": "Dark Ice Caves",
-            "content": [
-                '<div class="info_content">' +
-                '<h3>Cold & Deep</h3>' +
-                '<p>The London Eye is a giant Ferris wheel situated on the banks of the River Thames. The entire structure is 135 metres (443 ft) tall and the wheel has a diameter of 120 metres (394 ft).</p>' +
-                '</div>'
+            "date": "2014",
+            "title": "Portfolio 2014",
+            "desc": [
+                ""
             ],
             "thumbnail": "",
             "videoSrc": "",
@@ -42,10 +35,196 @@
                 "",
                 ""
             ],
-            "position": [
-                51.499633,-0.124755
+            "url": "",
+            "size": "1x1",
+            "category": "dev"
+        },
+        {
+            "id": 3,
+            "date": "2014",
+            "title": "Jobshaker",
+            "desc": [
+                ""
             ],
-            "country": "Austria"
+            "thumbnail": "",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "url": "",
+            "size": "1x1",
+            "category": "dev"
+        },
+        {
+            "id": 4,
+            "date": "2015",
+            "title": "Squary.js",
+            "desc": [
+                ""
+            ],
+            "thumbnail": "",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "url": "",
+            "size": "1x1",
+            "category": "dev"
+        },
+        {
+            "id": 5,
+            "date": "2015",
+            "title": "Le Hérisson Glouton",
+            "desc": [
+                ""
+            ],
+            "thumbnail": "",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "url": "",
+            "size": "1x1",
+            "category": "motion"
+        },
+        {
+            "id": 6,
+            "date": "2015",
+            "title": "Random Stuff",
+            "desc": [
+                ""
+            ],
+            "thumbnail": "",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "url": "",
+            "size": "1x1",
+            "category": ""
+        },
+        {
+            "id": 6,
+            "date": "2014",
+            "title": "Une minute",
+            "desc": [
+                ""
+            ],
+            "thumbnail": "",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "url": "",
+            "size": "1x1",
+            "category": "motion"
+        },
+        {
+            "id": 7,
+            "date": "2014",
+            "title": "SIVRAJ",
+            "desc": [
+                ""
+            ],
+            "thumbnail": "",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "url": "",
+            "size": "1x1",
+            "category": "video"
+        },
+        {
+            "id": 8,
+            "date": "2015",
+            "title": "Interseltic",
+            "desc": [
+                ""
+            ],
+            "thumbnail": "",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "url": "",
+            "size": "1x1",
+            "category": "video"
+        },
+        {
+            "id": 9,
+            "date": "2014",
+            "title": "TedX PanthéonSorbonne",
+            "desc": [
+                ""
+            ],
+            "thumbnail": "",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "url": "",
+            "size": "1x1",
+            "category": "motion"
+        },
+        {
+            "id": 10,
+            "date": "2015",
+            "title": "PatCorn",
+            "desc": [
+                ""
+            ],
+            "thumbnail": "",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "url": "",
+            "size": "1x1",
+            "category": "dev"
+        },
+        {
+            "id": 11,
+            "date": "2015",
+            "title": "Cinequest",
+            "desc": [
+                ""
+            ],
+            "thumbnail": "",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "url": "",
+            "size": "1x1",
+            "category": "dev"
+        },
+        {
+            "id": 11,
+            "date": "2015",
+            "title": "Slashe Website",
+            "desc": [
+                ""
+            ],
+            "thumbnail": "",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "url": "",
+            "size": "1x1",
+            "category": "dev"
         }
 
 

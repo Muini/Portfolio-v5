@@ -13,7 +13,7 @@ var gulp         = require('gulp'),
     clean        = require('gulp-clean'),
     minifyCSS    = require('gulp-minify-css'),
     autoprefix   = require('gulp-autoprefixer'),
-    include         = require('gulp-include');         // Plugin to include files into others
+    include      = require('gulp-include');         // Plugin to include files into others
     htmlmin      = require('gulp-htmlmin'),
     htmlreplace  = require('gulp-html-replace'),
     imagemin     = require('gulp-imagemin'),
@@ -53,9 +53,10 @@ gulp.task('styles', function () {
   var task = es.concat(cssFiles, sassFiles)
     .pipe(include())
     .pipe(autoprefix(conf.autoprefixerConf))
-    .pipe(concat('production.css'))
+    .pipe(minifyCSS({keepSpecialComments: 0, advanced: false}))
+    .pipe(concat('production.min.css'))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(conf.paths.styles));
+    .pipe(gulp.dest(conf.paths.dist + '/styles'))
 
   return browserSync.active ? task.pipe(reload({ stream: true })) : task;
 });
@@ -68,9 +69,10 @@ gulp.task('scripts', function() {
   var task = gulp.src(vendors.concat(custom))
     .pipe(include())
     .pipe(sourcemaps.init())
-    .pipe(concat('production.js'))
+    .pipe(uglify())
+    .pipe(concat('production.min.js'))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(conf.paths.scripts));
+    .pipe(gulp.dest(conf.paths.dist + '/scripts'));
 });
 
 gulp.task('html', function() {
@@ -91,44 +93,6 @@ gulp.task('images', function() {
       use: [pngquant()]
     }))
     .pipe(gulp.dest(conf.paths.dist + '/img'));
-});
-
-/* Dist styles minification */
-gulp.task('build-styles', ['styles'], function () {
-  return gulp.src(conf.paths.styles + '/production.css')
-    .pipe(include())
-    .pipe(minifyCSS({keepSpecialComments: 0, advanced: false}))
-    .pipe(rename("production.min.css"))
-    //.pipe(rev())
-    .pipe(gulp.dest(conf.paths.dist + '/styles'))
-    //.pipe(rev.manifest('rev-manifest-styles.json'))
-    //.pipe(gulp.dest(conf.paths.dist));
-});
-
-/* Dist scripts minification */
-gulp.task('build-scripts', ['scripts'], function () {
-  return gulp.src(conf.paths.scripts + '/production.js')
-    .pipe(include())
-    .pipe(uglify())
-    .pipe(rename("production.min.js"))
-    //.pipe(rev())
-    .pipe(gulp.dest(conf.paths.dist + '/scripts'))
-    //.pipe(rev.manifest('rev-manifest-scripts.json'))
-    //.pipe(gulp.dest(conf.paths.dist));
-});
-
-/* Dist html minification and file rev replacement */
-gulp.task('build-html', function () {
-  //var stylesRev = require('./'+ conf.paths.dist +'/rev-manifest-styles.json')['production.min.css'],
-  //    scriptsRev = require('./'+ conf.paths.dist +'/rev-manifest-scripts.json')['production.min.js'];
-
-  return gulp.src(conf.paths.dist + '/index.php')
-    //.pipe(htmlreplace({
-    //    css: "styles/" + stylesRev,
-    //    js: "scripts/" + scriptsRev
-    //  }))
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest(conf.paths.dist));
 });
 
 /*
@@ -153,19 +117,18 @@ gulp.task('serve', ['styles', 'scripts', 'html'], function () {
     conf.paths.styles + '/**/*' + conf.sassConf.stylesFormat,
     conf.paths.styles + '/**/*.css',
     '!' + conf.paths.styles + '/production.css'
-  ], ['styles','build-styles','build-html', reload]);
+  ], ['styles', 'copy', reload]);
 
   /* Watch scripts */
   gulp.watch([
-    conf.paths.scripts + '/**/*.js',
-    '!' + conf.paths.scripts + '/production.js'
-  ], ['scripts','build-scripts','build-html', reload]);
+    conf.paths.scripts + '/**/*.js'
+  ], ['scripts', 'copy', reload]);
 
   /* Watch html & php */
   gulp.watch([
     conf.paths.app + '/**/*.html',
     conf.paths.app + '/**/*.php'
-  ], ['html','copy','build-html', reload]);
+  ], ['html', 'copy', reload]);
 
   /* Watch images */
   gulp.watch([
@@ -197,16 +160,10 @@ gulp.task('clean-before', function() {
     .pipe(clean({ force: true }));
 });
 
-/* After-build cleaning to remove manifests */
-gulp.task('clean-after', function() {
-  return gulp.src([conf.paths.dist + '/rev-manifest-*'])
-    .pipe(clean());
-});
-
 /* Simple scripts and styles build */
-gulp.task('default', ['styles', 'html', 'scripts', 'build', 'serve'], function() {
+gulp.task('default', ['clean-before', 'html','styles', 'copy', 'images','scripts', 'serve'], function() {
 
 });
 
 /* Build task, concat & uglify + image optimization */
-gulp.task('build', gulpSequence('clean-before', ['build-styles', 'build-scripts'], ['build-html', 'images', 'copy'], 'clean-after'));
+gulp.task('build', gulpSequence('clean-before', ['images', 'copy']));

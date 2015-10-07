@@ -1,0 +1,78 @@
+/*
+*===================================
+*    GENERIC
+*===================================
+*/
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f1f1f1;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: rgba(60,30,0,0.6);
+    text-align: center;
+//    overflow: hidden;
+}
+p {
+    font-family: "Open Sans", sans-serif;
+    line-height: 2.1rem;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0.05em;
+    //text-shadow: 0.03em 0.03em 0 rgba(255,50,0,0.8), -0.03em -0.03em 0 rgba(255,200,0,0.8);
+    text-align: left;
+}
+
+h1,h2,h3,h4,h5{
+
+}
+h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: 'Baron Neue', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1em;
+    color: rgba(60,30,0,0.4);
+}
+h2{
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    text-shadow: none;
+    font-weight: 400;
+    color: rgba(60,30,0,0.5);
+    line-height: 2em;
+    font-family: 'Antic Slab', serif;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+a,a:active,a:visited {
+    text-decoration: none;
+    transition: all .3s ease;
+    cursor: pointer;
+    &:hover{
+        transition: all 0s ease;
+    }
+}
+
+audio{
+    display: none;
+}
+
+.hidden{
+    display: none !important;
+    opacity: 0 !important;
+}
+
+.container{
+    padding-top: 100px;
+}

@@ -4,7 +4,6 @@ var conf = {
     app: 'app',
     dist: 'dist',
     scripts: 'app/scripts',
-    inc: 'app/inc',
     styles: 'app/styles',
     css: 'app/styles/css',
     sass: 'app/styles/scss',
@@ -19,7 +18,6 @@ var conf = {
     stylesFormat: '.scss',
     mainSass: 'main',
     includePaths: [
-      'app/bower_components/bootstrap-sass-official/assets/stylesheets/',
       'app/styles/scss/'
     ]
   },
@@ -31,8 +29,7 @@ var conf = {
     lib: {
       prefix: 'app/bower_components/',
       files: [
-        'normalize.css/normalize.css',
-        'bootstrap/'
+        'Ionicons/css/ionicons.min.css'
       ]
     },
     custom: {
@@ -44,14 +41,13 @@ var conf = {
     lib: {
       prefix: 'app/bower_components/',
       files: [
-        'jquery/dist/jquery.js',
-        'handlebars/handlebars.js'
+        'jquery/dist/jquery.min.js',
+        'jquery-duotone/jquery.duotone.min.js'
       ]
     },
     custom: {
       prefix: 'app/scripts/',
       files: [
-        'components/map.js',
         'app.js'
       ]
     }

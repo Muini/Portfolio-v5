@@ -6,19 +6,38 @@
 
     <div class="container">
 
-        <section class="main">
+        <section class="projects">
 
-            <article class="project project--entry project--1">
-                <header class="project__header">
-                    <h1>Title of the project 1</h1>
-                </header>
-                <section class="project__content">
+            <?php
+                $json_data = file_get_contents('json/projects.json');
+                $json = json_decode($json_data, true);
+            ?>
 
-                </section>
-                <footer class="project__footer">
+            <?php foreach($json['projects'] as $project): ?>
 
-                </footer>
+            <article squary-size="<?php echo $project['size']; ?>" squary-filter="<?php echo $project['category']; ?>" class="project project--entry project--<?php echo $project['id']; ?>">
+                <div class="project__container">
+                    <div class="project__inner">
+                        <section class="project__overlay">
+                            <img src="<?php echo $project['thumbnail']; ?>" alt="<?php echo $project['title']; ?>" class="project__thumbnail" />
+                            <h1 class="para_move" para-force=20><?php echo $project['title']; ?></h1>
+                        </section>
+                        <section class="project__content">
+                            <header class="project__header">
+
+                            </header>
+                            <section class="project__main">
+
+                            </section>
+                            <footer class="project__footer">
+
+                            </footer>
+                        </section>
+                    </div>
+                </div>
             </article>
+
+            <?php endforeach; ?>
 
         </section>
 
