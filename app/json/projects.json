@@ -4,66 +4,14 @@
     "debug": false,
 
     "projects": [
-
         {
-            "id": 1,
-            "date": "2015",
-            "title": "Portfolio 2015",
-            "desc": [
-                ""
-            ],
-            "thumbnail": "",
-            "videoSrc": "",
-            "photos": [
-                "",
-                ""
-            ],
-            "url": "",
-            "size": "1x1",
-            "category": "dev"
-        },
-        {
-            "id": 2,
-            "date": "2014",
-            "title": "Portfolio 2014",
-            "desc": [
-                ""
-            ],
-            "thumbnail": "",
-            "videoSrc": "",
-            "photos": [
-                "",
-                ""
-            ],
-            "url": "",
-            "size": "1x1",
-            "category": "dev"
-        },
-        {
-            "id": 3,
-            "date": "2014",
-            "title": "Jobshaker",
-            "desc": [
-                ""
-            ],
-            "thumbnail": "",
-            "videoSrc": "",
-            "photos": [
-                "",
-                ""
-            ],
-            "url": "",
-            "size": "1x1",
-            "category": "dev"
-        },
-        {
-            "id": 4,
+            "id": 13,
             "date": "2015",
             "title": "Squary.js",
             "desc": [
                 ""
             ],
-            "thumbnail": "",
+            "thumbnail": "article03.jpg",
             "videoSrc": "",
             "photos": [
                 "",
@@ -74,13 +22,13 @@
             "category": "dev"
         },
         {
-            "id": 5,
+            "id": 12,
             "date": "2015",
-            "title": "Le Hérisson Glouton",
+            "title": "Portfolio 2015",
             "desc": [
                 ""
             ],
-            "thumbnail": "",
+            "thumbnail": "folio-2015.jpg",
             "videoSrc": "",
             "photos": [
                 "",
@@ -88,84 +36,16 @@
             ],
             "url": "",
             "size": "1x1",
-            "category": "motion"
+            "category": "dev"
         },
         {
-            "id": 6,
-            "date": "2015",
-            "title": "Random Stuff",
-            "desc": [
-                ""
-            ],
-            "thumbnail": "",
-            "videoSrc": "",
-            "photos": [
-                "",
-                ""
-            ],
-            "url": "",
-            "size": "1x1",
-            "category": ""
-        },
-        {
-            "id": 6,
+            "id": 11,
             "date": "2014",
-            "title": "Une minute",
+            "title": "TedX Panthéon Sorbonne",
             "desc": [
                 ""
             ],
-            "thumbnail": "",
-            "videoSrc": "",
-            "photos": [
-                "",
-                ""
-            ],
-            "url": "",
-            "size": "1x1",
-            "category": "motion"
-        },
-        {
-            "id": 7,
-            "date": "2014",
-            "title": "SIVRAJ",
-            "desc": [
-                ""
-            ],
-            "thumbnail": "",
-            "videoSrc": "",
-            "photos": [
-                "",
-                ""
-            ],
-            "url": "",
-            "size": "1x1",
-            "category": "video"
-        },
-        {
-            "id": 8,
-            "date": "2015",
-            "title": "Interseltic",
-            "desc": [
-                ""
-            ],
-            "thumbnail": "",
-            "videoSrc": "",
-            "photos": [
-                "",
-                ""
-            ],
-            "url": "",
-            "size": "1x1",
-            "category": "video"
-        },
-        {
-            "id": 9,
-            "date": "2014",
-            "title": "TedX PanthéonSorbonne",
-            "desc": [
-                ""
-            ],
-            "thumbnail": "",
+            "thumbnail": "folio-2015.jpg",
             "videoSrc": "",
             "photos": [
                 "",
@@ -178,28 +58,11 @@
         {
             "id": 10,
             "date": "2015",
-            "title": "PatCorn",
-            "desc": [
-                ""
-            ],
-            "thumbnail": "",
-            "videoSrc": "",
-            "photos": [
-                "",
-                ""
-            ],
-            "url": "",
-            "size": "1x1",
-            "category": "dev"
-        },
-        {
-            "id": 11,
-            "date": "2015",
             "title": "Cinequest",
             "desc": [
                 ""
             ],
-            "thumbnail": "",
+            "thumbnail": "folio-2015.jpg",
             "videoSrc": "",
             "photos": [
                 "",
@@ -210,13 +73,149 @@
             "category": "dev"
         },
         {
-            "id": 11,
+            "id": 9,
+            "date": "2015",
+            "title": "Random Stuff",
+            "desc": [
+                ""
+            ],
+            "thumbnail": "article05.jpg",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "url": "",
+            "size": "1x1",
+            "category": ""
+        },
+        {
+            "id": 8,
+            "date": "2014",
+            "title": "Jobshaker",
+            "desc": [
+                ""
+            ],
+            "thumbnail": "article02.jpg",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "url": "",
+            "size": "1x1",
+            "category": "dev"
+        },
+        {
+            "id": 7,
+            "date": "2014",
+            "title": "Une minute",
+            "desc": [
+                ""
+            ],
+            "thumbnail": "folio-2015.jpg",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "url": "",
+            "size": "1x1",
+            "category": "motion"
+        },
+        {
+            "id": 6,
+            "date": "2014",
+            "title": "Portfolio 2014",
+            "desc": [
+                ""
+            ],
+            "thumbnail": "article01.jpg",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "url": "",
+            "size": "1x1",
+            "category": "dev"
+        },
+        {
+            "id": 5,
+            "date": "2015",
+            "title": "Interseltic",
+            "desc": [
+                ""
+            ],
+            "thumbnail": "folio-2015.jpg",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "url": "",
+            "size": "1x1",
+            "category": "video"
+        },
+        {
+            "id": 4,
+            "date": "2014",
+            "title": "SIVRAJ",
+            "desc": [
+                ""
+            ],
+            "thumbnail": "folio-2015.jpg",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "url": "",
+            "size": "1x1",
+            "category": "video"
+        },
+        {
+            "id": 3,
+            "date": "2015",
+            "title": "Le Hérisson Glouton",
+            "desc": [
+                ""
+            ],
+            "thumbnail": "article04.jpg",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "url": "",
+            "size": "1x1",
+            "category": "motion"
+        },
+        {
+            "id": 2,
+            "date": "2014-2015",
+            "title": "PatCorn",
+            "desc": [
+                ""
+            ],
+            "thumbnail": "folio-2015.jpg",
+            "videoSrc": "",
+            "photos": [
+                "",
+                ""
+            ],
+            "url": "",
+            "size": "1x1",
+            "category": "dev"
+        },
+        {
+            "id": 1,
             "date": "2015",
             "title": "Slashe Website",
             "desc": [
                 ""
             ],
-            "thumbnail": "",
+            "thumbnail": "folio-2015.jpg",
             "videoSrc": "",
             "photos": [
                 "",

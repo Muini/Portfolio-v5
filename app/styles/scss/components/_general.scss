@@ -11,12 +11,12 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background: #f1f1f1;
+    background: $bg;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 1.4rem;
-    color: rgba(60,30,0,0.6);
+    color: rgba($darkbrown,0.6);
     text-align: center;
 //    overflow: hidden;
 }
@@ -28,7 +28,6 @@ p {
     margin: 0;
     letter-spacing: 0.05em;
     //text-shadow: 0.03em 0.03em 0 rgba(255,50,0,0.8), -0.03em -0.03em 0 rgba(255,200,0,0.8);
-    text-align: left;
 }
 
 h1,h2,h3,h4,h5{
@@ -41,14 +40,14 @@ h1{
     font-weight: 700;
     letter-spacing: 0.1em;
     line-height: 1em;
-    color: rgba(60,30,0,0.4);
+    color: rgba($darkbrown,0.4);
 }
 h2{
     font-size: 2rem;
     letter-spacing: 0.1em;
     text-shadow: none;
     font-weight: 400;
-    color: rgba(60,30,0,0.5);
+    color: rgba($darkbrown,0.5);
     line-height: 2em;
     font-family: 'Antic Slab', serif;
     margin-top: 10px;
@@ -64,6 +63,24 @@ a,a:active,a:visited {
     }
 }
 
+.shadowed{
+    //&:hover{
+    color:rgb(230,230,230);
+    text-shadow: 0 -0.04em 0px rgba(255,255,255,1), //Light
+    0 0 0.2em rgba($darkbrown,0.4), //AO
+    0 0.05em 0 rgba($darkbrown,0.1), //Shadow
+    0 0.1em 0.01em rgba($darkbrown,0.045),
+    0 0.15em 0.02em rgba($darkbrown,0.04),
+    0 0.2em 0.03em rgba($darkbrown,0.035),
+    0 0.25em 0.04em rgba($darkbrown,0.03),
+    0 0.3em 0.05em rgba($darkbrown,0.025),
+    0 0.35em 0.06em rgba($darkbrown,0.02),
+    0 0.4em 0.07em rgba($darkbrown,0.015),
+    0 0.45em 0.08em rgba($darkbrown,0.01),
+    0 0.5em 0.09em rgba($darkbrown,0.005);
+//}
+}
+
 audio{
     display: none;
 }
@@ -74,5 +91,5 @@ audio{
 }
 
 .container{
-    padding-top: 100px;
+    padding-top: 40px;
 }

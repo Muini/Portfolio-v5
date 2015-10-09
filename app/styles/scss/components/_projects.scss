@@ -2,46 +2,118 @@
     margin: 0 auto;
     width: 70%;
     text-align: center;
+
+    @media screen and (max-width: $break-tablet){
+        width: 80%;
+    }
+    @media screen and (max-width: $break-mobile){
+        width: 90%;
+    }
 }
 
 .project{
     display: inline-block;
-    //overflow: visible !important;
     display: none;
-    padding: 40px;
+    padding: 45px;
+    transition: height .3s ease;
 
     &__container{
         position: relative;
         width: 100%;
         height: 100%;
         box-shadow: 0 0.2em 0px rgba(255,255,255,1) inset, //Light
-        0 0 2em rgba(60,30,0,0.2); //AO
-           transform: rotate(45deg);
+                    0 0 0.1em rgba($darkbrown,0.2); //AO
+        transform: rotate(45deg);
+        background: $bg;
         margin: 0 5%;
-        margin-top: 0%;
+        margin-top: 0;
         padding-bottom: 20%;
-        cursor: pointer;
+        transition: all .1s ease-in;
+        z-index: 0;
+
+        &:hover{
+            cursor: pointer;
+            box-shadow: 0 0.2em 0px rgba(255,255,255,1) inset, //Light
+                        2em 2em 3em rgba($darkbrown,0.15); //AO
+            transform: rotate(45deg) translate(-2em,-2em) scale(1.1);
+            z-index: 10;
+            transition: all .3s ease-out;
+
+            .project__overlay{
+                h1{
+                    opacity: 0;
+                    transform: translateY(2em);
+                }
+                p{
+                    opacity: 0;
+                    transform: translateY(2em);
+                }
+                .duotone{
+                    opacity: 0;
+                }
+            }
+        }
     }
 
     &__inner{
         position: absolute;
         top: 4%;
         left: 4%;
-        background: rgba(230,230,230,0.8);
+        *background: rgba(230,230,230,0.8);
         width: 92%;
         height: 92%;
         box-shadow: 0 0.2em 0px rgba(255,255,255,1), //Light
-        0 0 1em rgba(60,30,0,0.1) inset; //AO
+        0 0 1em rgba(60,30,0,.1) inset; //AO
         overflow: hidden;
     }
     &__overlay{
-        *background-image: url(../img/articles.jpg);
-        *background-size: cover;
+        display: table;
+        position: relative;
         width: 150%;
         height: 150%;
         margin-top: -25%;
         margin-left: -25%;
         transform: rotate(-45deg);
+        text-align: center;
+        &>div{
+            display: table-cell;
+            vertical-align: middle;
+            width: 100%;
+            height: 100%;
+        }
+        img{
+            //Thumbnail
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -10;
+            height: 100%;
+        }
+        .duotone{
+            opacity: 0;
+            transition:opacity .6s ease-out;
+        }
+        .processed{
+            opacity: 1;
+        }
+        h1{
+            //Title of the project
+            font-family: "Open Sans", sans-serif;
+
+            font-size: 1.6rem;
+            line-height: 1.5em;
+            letter-spacing: 0.15em;
+            padding: 0 20%;
+            padding-top: 5%;
+            color:$white;
+            transition: all .3s ease;
+
+            *text-shadow: 0 0 1em rgba(60,30,0,.6);
+        }
+        p{
+            transition: all .3s ease;
+            font-family: 'Antic Slab',serif;
+        }
     }
     &__content{
         display: none;

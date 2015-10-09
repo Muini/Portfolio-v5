@@ -1,4 +1,52 @@
 <html lang="en">
+    <?php
+        //Make a simple counter and store the value in a data attribute that can be read by javascript
+        session_start();
+        $counter_name = "json/ips.txt";
+
+        // Check if a text file exists. If not create one and initialize it to zero.
+        if (!file_exists($counter_name)) {
+          $f = fopen($counter_name, "w");
+          fwrite($f,"0");
+          fclose($f);
+        }
+
+        function getRealIpAddr()
+        {
+            if (!empty($_SERVER['HTTP_CLIENT_IP']))   //check ip from share internet
+            {
+              $ip=$_SERVER['HTTP_CLIENT_IP'];
+            }
+            elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))   //to check ip is pass from proxy
+            {
+              $ip=$_SERVER['HTTP_X_FORWARDED_FOR'];
+            }
+            else
+            {
+              $ip=$_SERVER['REMOTE_ADDR'];
+            }
+            return $ip;
+        }
+
+        // Read the current value of our counter file
+        $f = fopen($counter_name,"r");
+        $counterVal = fread($f, filesize($counter_name));
+        fclose($f);
+
+        // Has visitor been counted in this session?
+        // If not, increase counter value by one
+        if(!isset($_SESSION['hasVisited'])){
+          $_SESSION['hasVisited']="yes";
+          $counterVal++;
+          $f = fopen($counter_name, "w");
+          fwrite($f, $counterVal);
+          fclose($f);
+        }
+
+        echo getRealIpAddr();
+        echo "<br>";
+        echo $counterVal;
+    ?>
     <head>
         <script type="text/javascript">
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -50,5 +98,7 @@
         <meta itemprop="name" content="Corentin Flach • Storyteller / Motion Designer / Front-end developer">
         <meta itemprop="description" content="Storytelling with film-making, motion design, interactive &amp; creative front-end development, this is what I like and I do as french student &amp; Freelance.">
         <meta itemprop="image" content="http://corentinflach.fr/img/cover.jpg">
+        <script type="text/javascript">
 
+        </script>
 </head>
