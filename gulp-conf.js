@@ -41,7 +41,6 @@ var conf = {
     lib: {
       prefix: 'app/bower_components/',
       files: [
-        //'webfontloader/webfontloader.js',
         'jquery/dist/jquery.min.js',
         'jquery-duotone/jquery.duotone.min.js'
       ]

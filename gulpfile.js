@@ -104,7 +104,7 @@ gulp.task('serve', ['styles', 'scripts', 'html'], function () {
 
   browserSync({
     proxy: conf.paths.proxy,
-    notify: false,
+    notify: true,
     ghostMode: {
       clicks: true,
       forms: true,
@@ -155,15 +155,13 @@ gulp.task('copy', function() {
 });
 
 /* Total dist cleaning */
-gulp.task('clean-before', function() {
+gulp.task('clean', function() {
   return gulp.src(conf.paths.dist)
     .pipe(clean({ force: true }));
 });
 
 /* Simple scripts and styles build */
-gulp.task('default', ['clean-before', 'html','styles', 'copy', 'images','scripts', 'serve'], function() {
-
-});
+gulp.task('default', gulpSequence('clean', ['html', 'styles', 'copy'], ['images', 'scripts'], 'serve'));
 
 /* Build task, concat & uglify + image optimization */
 gulp.task('build', gulpSequence('clean-before', ['images', 'copy']));
