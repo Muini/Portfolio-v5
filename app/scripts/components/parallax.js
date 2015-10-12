@@ -42,7 +42,7 @@ var parallax = {
                     //var scale = 1 - (para_intensity/it._PARA_FORCE_MAX); //200 est la valeur max de para-force
 
                     //var val = "translate("+valX/para_intensity+"px,"+valY/para_intensity+"px) rotateY("+valX/para_intensity/2+"deg) rotateX("+-valY/para_intensity/2+"deg) scale("+scale+")";
-                    var val = "translate("+valX/para_intensity+"px,"+valY/para_intensity+"px) rotateY("valX/para_intensity/2+"deg) rotateX("+-valY/para_intensity/2+"deg)";
+                    var val = "translate("+valX/para_intensity+"px,"+valY/para_intensity+"px) rotateY("+valX/para_intensity/2+"deg) rotateX("+-valY/para_intensity/2+"deg)";
 
                     //var val = "translate("+valX/para_intensity+"px,"+valY/para_intensity+"px) scale("+scale+")";
                     //var val = "translate("+valX/para_intensity+"px,"+valY/para_intensity+"px)";

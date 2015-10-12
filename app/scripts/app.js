@@ -1,6 +1,6 @@
 //=require vendors/*.js
-//=include components/*.js
-//=include views/*.js
+//=require components/*.js
+//=require views/*.js
 
 //Font loading
 WebFontConfig = {

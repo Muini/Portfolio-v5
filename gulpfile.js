@@ -25,6 +25,12 @@ var gulp         = require('gulp'),
     wallpaper    = require('wallpaper'),
     reload       = browserSync.reload;
 
+/* Errors Handling */
+function handleError(err) {
+  console.log(err.toString());
+  this.emit('end');
+}
+
 /* Concatenates vendor & custom styles + sass compilation */
 gulp.task('styles', function () {
   var vendors = conf.styles.lib.files.map(function(fileName) { return conf.styles.lib.prefix + fileName; }),
@@ -42,12 +48,12 @@ gulp.task('styles', function () {
         sass: conf.paths.sass,
         image: conf.paths.images,
         require: ['reset']
-      }));
+      }).on("error", handleError));
   } else {
     /* Otherwise we only compile sass files */
     sassFiles = sassFiles
       .pipe(sourcemaps.init())
-      .pipe(sass(conf.sassConf));
+      .pipe(sass(conf.sassConf).on("error", handleError));
   }
 
   var task = es.concat(cssFiles, sassFiles)
@@ -69,7 +75,7 @@ gulp.task('scripts', function() {
   var task = gulp.src(vendors.concat(custom))
     .pipe(include())
     .pipe(sourcemaps.init())
-    .pipe(uglify())
+    .pipe(uglify().on("error", handleError))
     .pipe(concat('production.min.js'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(conf.paths.dist + '/scripts'));
@@ -79,7 +85,7 @@ gulp.task('html', function() {
     var task = gulp.src(conf.paths.app + '/index.php')
     .pipe(include())
     .pipe(sourcemaps.init())
-    .pipe(concat('index.php'))
+    .pipe(concat('index.php').on("error", handleError))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(conf.paths.dist));
 });
@@ -91,7 +97,7 @@ gulp.task('images', function() {
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],
       use: [pngquant()]
-    }))
+    }).on("error", handleError))
     .pipe(gulp.dest(conf.paths.dist + '/img'));
 });
 
