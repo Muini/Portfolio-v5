@@ -43,9 +43,9 @@
           fclose($f);
         }
 
-        echo getRealIpAddr();
-        echo "<br>";
-        echo $counterVal;
+        //echo getRealIpAddr();
+        //echo "<br>";
+        //echo $counterVal;
     ?>
     <head>
         <script type="text/javascript">

@@ -1,11 +1,21 @@
 .header{
 
+    padding: 5%;
+    padding-top: 0;
+
     h1{
         font-size: 7rem;
         color:$bg;
         margin-top: 60px;
 
-        transition: all 1s ease;
+        transition: transform .3s ease, opacity .3s ease;
+
+        @media screen and (max-width: $break-tablet){
+            font-size: 5rem;
+        }
+        @media screen and (max-width: $break-mobile){
+            font-size: 3.5rem;
+        }
     }
 
     img{
@@ -13,5 +23,26 @@
     }
     &__nav{
         *display: none;
+        margin-top: 60px;
+        li{
+            display: inline-block;
+            margin: 0 20px;
+            a{
+                font-family: "Open Sans", sans-serif;
+                font-weight: 600;
+                font-size: 1.2rem;
+                letter-spacing: 0.1em;
+                line-height: 3em;
+                text-transform: uppercase;
+                opacity: 0.6;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+        &--active:after{
+            width: 33% !important;
+            left: 33% !important;
+        }
     }
 }

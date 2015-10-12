@@ -21,21 +21,32 @@
                         <section class="project__overlay">
                             <div>
                                 <img src="img/thumbnails/<?php echo $project['thumbnail']; ?>" alt="<?php echo $project['title'];  ?>" class="project__thumbnail"/>
-                                <!-- <img src="img/thumbnails/<?php echo $project['thumbnail']; ?>" alt="<?php echo $project['title'];  ?>" class="project__thumbnail duotone" data-gradient-map="rgb(163, 154, 140) 25%, rgb(196, 190, 182) 25%" /> -->
                                 <img src="img/thumbnails/<?php echo $project['thumbnail']; ?>" alt="<?php echo $project['title'];  ?>" class="project__thumbnail duotone" data-gradient-map="rgb(110, 126, 92) 0%, rgb(196, 190, 182) 25%" />
-                                <h1 class="para_move shadowed" para-force=20><?php echo $project['title']; ?></h1>
+                                <h1 class="shadowed"><?php echo $project['title']; ?></h1>
                                 <p class=""><?php echo $project['date']; ?></p>
                             </div>
                         </section>
                         <section class="project__content">
                             <header class="project__header">
-
+                                <h1><?php echo $project['title']; ?></h1>
+                                <p class="project__desc"><?php echo $project['desc']; ?></p>
                             </header>
                             <section class="project__main">
+                                <?php if( $project['videoSrc'] != NULL ): ?>
+                                    <video>
 
+                                    </video>
+                                <?php endif; ?>
+                                <?php if( count($project['photos']) > 0 ): ?>
+                                    <ul class="gallery">
+                                        <li><img src alt></li>
+                                        <li><img src alt></li>
+                                        <li><img src alt></li>
+                                    </ul>
+                                <?php endif; ?>
                             </section>
                             <footer class="project__footer">
-
+                                <a href="<?php echo $project['url']; ?>">Link to project</a>
                             </footer>
                         </section>
                     </div>

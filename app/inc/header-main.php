@@ -6,12 +6,11 @@
             <h2 class="header__desc">Storytelling - Motion Design - Front-end development</h2>
             <nav class="header__nav">
                 <ul>
-                    <li><a onclick="grid.projects.filter('all');">Everything</a></li>
+                    <li><a class="header__nav--active" onclick="grid.projects.filter('all');">Everything</a></li>
                     <li><a onclick="grid.projects.filter('motion');">Motion</a></li>
-                    <li><a onclick="grid.projects.filter('video');">Short-film</a></li>
                     <li><a onclick="grid.projects.filter('dev');">Development</a></li>
+                    <li><a onclick="grid.projects.filter('video');">Short-film</a></li>
                     <li><a>About</a></li>
-                    <li><a>Contact</a></li>
                 </ul>
             </nav>
         </div>

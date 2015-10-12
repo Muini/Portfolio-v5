@@ -1,5 +1,5 @@
 {
-    "name": "Feel The Real",
+    "name": "Corentin Flach Projects",
     "version": 0.1,
     "debug": false,
 
@@ -17,7 +17,7 @@
                 "",
                 ""
             ],
-            "url": "",
+            "url": "http://corentinflach.fr/squary/",
             "size": "1x1",
             "category": "dev"
         },
@@ -29,13 +29,13 @@
                 ""
             ],
             "thumbnail": "folio-2015.jpg",
-            "videoSrc": "",
+            "videoSrc": "http://corentinflach.fr/folio-2015/",
             "photos": [
                 "",
                 ""
             ],
             "url": "",
-            "size": "1x1",
+            "size": "2x2",
             "category": "dev"
         },
         {
@@ -46,12 +46,12 @@
                 ""
             ],
             "thumbnail": "folio-2015.jpg",
-            "videoSrc": "",
+            "videoSrc": "http://www.youtube.com/watch?v=gW2qhvhfBV8",
             "photos": [
                 "",
                 ""
             ],
-            "url": "",
+            "url": "http://www.youtube.com/watch?v=gW2qhvhfBV8",
             "size": "1x1",
             "category": "motion"
         },
@@ -80,14 +80,14 @@
                 ""
             ],
             "thumbnail": "article05.jpg",
-            "videoSrc": "",
+            "videoSrc": "http://www.youtube.com/watch?v=NdNu_6yR6gU",
             "photos": [
                 "",
                 ""
             ],
-            "url": "",
-            "size": "1x1",
-            "category": ""
+            "url": "http://www.youtube.com/watch?v=NdNu_6yR6gU",
+            "size": "2x2",
+            "category": "motion"
         },
         {
             "id": 8,
@@ -114,12 +114,12 @@
                 ""
             ],
             "thumbnail": "folio-2015.jpg",
-            "videoSrc": "",
+            "videoSrc": "http://www.youtube.com/watch?v=_gwcpeRl1O4",
             "photos": [
                 "",
                 ""
             ],
-            "url": "",
+            "url": "http://www.youtube.com/watch?v=_gwcpeRl1O4",
             "size": "1x1",
             "category": "motion"
         },
@@ -136,7 +136,7 @@
                 "",
                 ""
             ],
-            "url": "",
+            "url": "http://corentinflach.fr/folio-2014/",
             "size": "1x1",
             "category": "dev"
         },
@@ -165,29 +165,29 @@
                 ""
             ],
             "thumbnail": "folio-2015.jpg",
-            "videoSrc": "",
+            "videoSrc": "http://www.youtube.com/watch?v=wLeDSSw8DYA",
             "photos": [
                 "",
                 ""
             ],
-            "url": "",
+            "url": "http://www.youtube.com/watch?v=wLeDSSw8DYA",
             "size": "1x1",
             "category": "video"
         },
         {
             "id": 3,
-            "date": "2015",
+            "date": "2013",
             "title": "Le Hérisson Glouton",
             "desc": [
                 ""
             ],
             "thumbnail": "article04.jpg",
-            "videoSrc": "",
+            "videoSrc": "http://www.youtube.com/watch?v=WZgPWUAQbys",
             "photos": [
                 "",
                 ""
             ],
-            "url": "",
+            "url": "http://www.youtube.com/watch?v=WZgPWUAQbys",
             "size": "1x1",
             "category": "motion"
         },
@@ -204,7 +204,7 @@
                 "",
                 ""
             ],
-            "url": "",
+            "url": "http://patcorn.fr/",
             "size": "1x1",
             "category": "dev"
         },
@@ -221,7 +221,7 @@
                 "",
                 ""
             ],
-            "url": "",
+            "url": "http://slashe.com/",
             "size": "1x1",
             "category": "dev"
         }

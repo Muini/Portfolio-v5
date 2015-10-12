@@ -52,12 +52,36 @@ h2{
     font-family: 'Antic Slab', serif;
     margin-top: 10px;
     margin-bottom: 30px;
+
+    @media screen and (max-width: $break-tablet){
+        font-size: 1.6rem;
+    }
+    @media screen and (max-width: $break-mobile){
+        font-size: 1.4rem;
+    }
 }
 
 a,a:active,a:visited {
+    position: relative;
     text-decoration: none;
     transition: all .3s ease;
     cursor: pointer;
+    &:after{
+        content: "";
+        display:block;
+        position:absolute;
+        width: 0%;
+        height: 1px;
+        background: rgba($darkbrown,0.6);
+        left: 50%;
+        top:120%;
+        transition: width .3s ease, left .3s ease;
+    }
+    &:hover:after{
+        width: 33%;
+        left: 33%;
+        transition: width .05s ease, left .05s ease;
+    }
     &:hover{
         transition: all 0s ease;
     }
@@ -91,5 +115,5 @@ audio{
 }
 
 .container{
-    padding-top: 40px;
+    *padding-top: 40px;
 }

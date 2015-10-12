@@ -1,5 +1,6 @@
 //=require vendors/*.js
 //=include components/*.js
+//=include views/*.js
 
 //Font loading
 WebFontConfig = {
@@ -29,16 +30,12 @@ WebFontConfig = {
 })(document);
 
 //Modules loading
+nav.init();
 parallax.init();
 hover.init();
 audio.init();
+projects.init();
 
-//On ready event
-$(document).ready(function() {
-
-    $('img.duotone').duotone();
-
-    //setTimeout(function(){ grid.init(); }, 1000);
-    grid.init();
-
-});
+$('img.duotone').duotone();
+//setTimeout(function(){ grid.init(); }, 1000);
+grid.init();

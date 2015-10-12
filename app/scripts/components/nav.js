@@ -1,0 +1,5 @@
+var nav = {
+    init:function(){
+
+    }
+}
