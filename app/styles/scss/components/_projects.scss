@@ -1,5 +1,6 @@
 .projects{
     margin: 0 auto;
+    margin-top: 30px;
     width: 70%;
     text-align: center;
 
@@ -28,8 +29,10 @@
         margin: 0 5%;
         margin-top: 0;
         padding-bottom: 20%;
-        transition: all .1s ease-in;
+        transition: all .3s ease-in;
         z-index: 0;
+        perspective: 1000;
+        transform-style: preserve-3d;
 
         &:hover{
             cursor: pointer;
@@ -37,7 +40,7 @@
                         2em 2em 3em rgba($darkbrown,0.2); //AO
             transform: rotate(45deg) translateY(5%) translate(-2em,-2em) scale(1.1);
             z-index: 10;
-            transition: all .3s ease-out;
+            transition: all .6s ease-out;
 
             .project__overlay{
                 h1{
@@ -56,6 +59,7 @@
     }
 
     &__inner{
+        display: block;
         position: absolute;
         top: 4%;
         left: 4%;
@@ -64,6 +68,7 @@
         box-shadow: 0 0.2em 0px rgba(255,255,255,1), //Light
         0 0 1em rgba(60,30,0,.1) inset; //AO
         overflow: hidden;
+        backface-visibility: hidden;
     }
     &__overlay{
         display: table;
@@ -123,9 +128,7 @@
             }
         }
     }
-    &__content{
-        display: none;
-    }
+
     &[squary-size="1x1"]{
         @media screen and (max-width: $break-mobile){
             .project__container{
@@ -158,4 +161,32 @@
             }
         }
     }
+
+    &__content{
+        display: block;
+        position: absolute;
+        background: $bg;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+    }
+
+    &--open{
+        padding: 0;
+        z-index: 1000 !important;
+
+        .project__container{
+            transform: rotate(0) rotateY(180deg) translateY(0) !important;
+
+            box-shadow: 0 0.2em 0px rgba(255,255,255,1) inset, //Light
+                        0 2em 3em rgba($darkbrown,0.2); //AO
+        }
+        .project__overlay{
+            *display: none;
+        }
+    }
+
 }

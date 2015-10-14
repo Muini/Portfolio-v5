@@ -92,7 +92,7 @@ gulp.task('html', function() {
 
 /* Dist image optimization */
 gulp.task('images', function() {
-  return gulp.src(conf.paths.images + '/*')
+  return gulp.src(conf.paths.images + '/**/*')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],

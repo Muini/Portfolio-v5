@@ -8,9 +8,9 @@
             "id": 13,
             "date": "2015",
             "title": "Squary.js",
-            "desc": [
+            "desc":
                 ""
-            ],
+            ,
             "thumbnail": "article03.jpg",
             "videoSrc": "",
             "photos": [
@@ -25,9 +25,9 @@
             "id": 12,
             "date": "2015",
             "title": "Portfolio 2015",
-            "desc": [
+            "desc":
                 ""
-            ],
+            ,
             "thumbnail": "folio-2015.jpg",
             "videoSrc": "http://corentinflach.fr/folio-2015/",
             "photos": [
@@ -42,9 +42,9 @@
             "id": 11,
             "date": "2014",
             "title": "TedX Panthéon Sorbonne",
-            "desc": [
+            "desc":
                 ""
-            ],
+            ,
             "thumbnail": "folio-2015.jpg",
             "videoSrc": "http://www.youtube.com/watch?v=gW2qhvhfBV8",
             "photos": [
@@ -59,9 +59,9 @@
             "id": 10,
             "date": "2015",
             "title": "Cinequest",
-            "desc": [
+            "desc":
                 ""
-            ],
+            ,
             "thumbnail": "folio-2015.jpg",
             "videoSrc": "",
             "photos": [
@@ -76,9 +76,9 @@
             "id": 9,
             "date": "2015",
             "title": "Random Stuff",
-            "desc": [
+            "desc":
                 ""
-            ],
+            ,
             "thumbnail": "article05.jpg",
             "videoSrc": "http://www.youtube.com/watch?v=NdNu_6yR6gU",
             "photos": [
@@ -93,9 +93,9 @@
             "id": 8,
             "date": "2014",
             "title": "Jobshaker",
-            "desc": [
+            "desc":
                 ""
-            ],
+            ,
             "thumbnail": "article02.jpg",
             "videoSrc": "",
             "photos": [
@@ -110,9 +110,9 @@
             "id": 7,
             "date": "2014",
             "title": "Une minute",
-            "desc": [
+            "desc":
                 ""
-            ],
+            ,
             "thumbnail": "folio-2015.jpg",
             "videoSrc": "http://www.youtube.com/watch?v=_gwcpeRl1O4",
             "photos": [
@@ -127,9 +127,9 @@
             "id": 6,
             "date": "2014",
             "title": "Portfolio 2014",
-            "desc": [
+            "desc":
                 ""
-            ],
+            ,
             "thumbnail": "article01.jpg",
             "videoSrc": "",
             "photos": [
@@ -144,9 +144,9 @@
             "id": 5,
             "date": "2015",
             "title": "Interseltic",
-            "desc": [
+            "desc":
                 ""
-            ],
+            ,
             "thumbnail": "folio-2015.jpg",
             "videoSrc": "https://vimeo.com/album/3264465/video/120592302",
             "photos": [
@@ -161,9 +161,9 @@
             "id": 4,
             "date": "2014",
             "title": "SIVRAJ",
-            "desc": [
+            "desc":
                 ""
-            ],
+            ,
             "thumbnail": "folio-2015.jpg",
             "videoSrc": "http://www.youtube.com/watch?v=wLeDSSw8DYA",
             "photos": [
@@ -178,9 +178,9 @@
             "id": 3,
             "date": "2013",
             "title": "Le Hérisson Glouton",
-            "desc": [
+            "desc":
                 ""
-            ],
+            ,
             "thumbnail": "article04.jpg",
             "videoSrc": "http://www.youtube.com/watch?v=WZgPWUAQbys",
             "photos": [
@@ -195,9 +195,9 @@
             "id": 2,
             "date": "2013-2014",
             "title": "PatCorn",
-            "desc": [
+            "desc":
                 ""
-            ],
+            ,
             "thumbnail": "folio-2015.jpg",
             "videoSrc": "",
             "photos": [
@@ -212,9 +212,9 @@
             "id": 1,
             "date": "2015",
             "title": "Slashe Website",
-            "desc": [
+            "desc":
                 ""
-            ],
+            ,
             "thumbnail": "folio-2015.jpg",
             "videoSrc": "",
             "photos": [

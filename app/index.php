@@ -26,30 +26,30 @@
                                 <p class=""><?php echo $project['date']; ?></p>
                             </div>
                         </section>
-                        <section class="project__content">
-                            <header class="project__header">
-                                <h1><?php echo $project['title']; ?></h1>
-                                <p class="project__desc"><?php echo $project['desc']; ?></p>
-                            </header>
-                            <section class="project__main">
-                                <?php if( $project['videoSrc'] != NULL ): ?>
-                                    <video>
-
-                                    </video>
-                                <?php endif; ?>
-                                <?php if( count($project['photos']) > 0 ): ?>
-                                    <ul class="gallery">
-                                        <li><img src alt></li>
-                                        <li><img src alt></li>
-                                        <li><img src alt></li>
-                                    </ul>
-                                <?php endif; ?>
-                            </section>
-                            <footer class="project__footer">
-                                <a href="<?php echo $project['url']; ?>">Link to project</a>
-                            </footer>
-                        </section>
                     </div>
+                    <section class="project__content">
+                        <header class="project__header">
+                            <h1><?php echo $project['title']; ?></h1>
+                            <p class="project__desc"><?php echo $project['desc']; ?></p>
+                        </header>
+                        <section class="project__main">
+                            <?php if( $project['videoSrc'] != NULL ): ?>
+                                <video>
+
+                                </video>
+                            <?php endif; ?>
+                            <?php if( count($project['photos']) > 0 ): ?>
+                                <ul class="gallery">
+                                    <li><img src alt></li>
+                                    <li><img src alt></li>
+                                    <li><img src alt></li>
+                                </ul>
+                            <?php endif; ?>
+                        </section>
+                        <footer class="project__footer">
+                            <a href="<?php echo $project['url']; ?>">Link to project</a>
+                        </footer>
+                    </section>
                 </div>
             </article>
 
