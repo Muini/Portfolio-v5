@@ -1,59 +1,46 @@
 var parallax = {
 
-    _PARA_FORCE_MAX: 100,
-
-    _elems: null,
+    them: null,
 
     init: function(){
 
-        //Parallax Function
-        this._elems = document.querySelectorAll(".para_move");
+        this.them = document.querySelectorAll(".parallax");
 
-        //init distance
-        /*
-        for(var i=0; i<this._elems.length; i++)
-        {
-            var para_intensity = this._elems[i].getAttribute("para-force");
-            var scale = 1 - (para_intensity/this._PARA_FORCE_MAX); //200 est la valeur max de para-force
-
-            var val = "scale("+scale+")";
-
-            this._elems[i].style.WebkitTransform = val;
-            this._elems[i].style.MozTransform = val;
-            this._elems[i].style.transform = val;
-        }*/
+        var them = this.them;
 
         var it = this;
 
-        (function() {
-            window.onmousemove = handleMouseMove;
-            function handleMouseMove(event) {
-                event = event || window.event;
+        var valX = 0;
+        var valY = 0;
 
-                //var valX = window.innerWidth/2 - event.clientX;
-                //var valY = window.innerHeight/2 - event.clientY;
+        var doc = document.documentElement;
 
-                for(var i=0; i<it._elems.length; i++)
-                {
-                    var valX = it._elems[i].offsetWidth/2 - event.clientX;
-                    var valY = it._elems[i].offsetHeight/2 - event.clientY;
+        window.addEventListener("mousemove", function(event){
 
-                    var para_intensity = it._elems[i].getAttribute("para-force");
-                    //var scale = 1 - (para_intensity/it._PARA_FORCE_MAX); //200 est la valeur max de para-force
+            event = event || window.event;
 
-                    //var val = "translate("+valX/para_intensity+"px,"+valY/para_intensity+"px) rotateY("+valX/para_intensity/2+"deg) rotateX("+-valY/para_intensity/2+"deg) scale("+scale+")";
-                    var val = "translate("+valX/para_intensity+"px,"+valY/para_intensity+"px) rotateY("+valX/para_intensity/2+"deg) rotateX("+-valY/para_intensity/2+"deg)";
+            //var left = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
+            //var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
 
-                    //var val = "translate("+valX/para_intensity+"px,"+valY/para_intensity+"px) scale("+scale+")";
-                    //var val = "translate("+valX/para_intensity+"px,"+valY/para_intensity+"px)";
+            valX = window.innerWidth/2 - event.clientX /*- left*/;
+            valY = window.innerHeight/2 - event.clientY /*- top*/;
 
-                    it._elems[i].style.WebkitTransform = val;
-                    it._elems[i].style.MozTransform = val;
-                    it._elems[i].style.transform = val;
-                }
+            for(var i=0; i<them.length; i++)
+            {
+                //valX = it.them[i].offsetWidth/2 - event.clientX - left;
+                //valY = it.them[i].offsetHeight/2 - event.clientY - top;
+
+                var para_intensity = them[i].getAttribute("data-parallax-distance");
+
+                var val = "translate("+valX/para_intensity+"px,"+valY/para_intensity+"px)";
+                //var val = "translate("+valX/para_intensity+"px,"+valY/para_intensity+"px) rotateY("+valX/para_intensity/2+"deg) rotateX("+-valY/para_intensity/2+"deg)";
+
+                them[i].style.WebkitTransform = val;
+                them[i].style.MozTransform = val;
+                them[i].style.transform = val;
             }
-        })();
+
+        });
 
     }
-
 }

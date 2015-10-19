@@ -1,11 +1,17 @@
 .header{
 
     padding: 0 5%;
+    padding-top: 160px;
 
+    @media screen and (max-width: $break-tablet){
+        padding-top: 130px;
+    }
+    @media screen and (max-width: $break-mobile){
+        padding-top: 100px;
+    }
     h1{
         font-size: 7rem;
         color:$bg;
-        margin-top: 60px;
 
         transition: transform .3s ease, opacity .3s ease;
 
@@ -16,10 +22,31 @@
             font-size: 3.5rem;
         }
     }
+    &__vid{
+        background: $bg;
+        margin: 0 auto;
+        *width: 50%;
+        position: absolute;
+        top: -20px;
+        z-index: -1;
+        width: 600px;
+        margin-left: -300px;
 
-    img{
+        @media screen and (max-width: $break-tablet){
+            top: -10px;
+            width: 440px;
+            margin-left: -220px;
+        }
+        @media screen and (max-width: $break-mobile){
+            top:0;
+            width: 320px;
+            margin-left: -160px;
+        }
+    }
+    h2{
         display: none;
     }
+
     &__nav{
         *display: none;
         margin-top: 60px;

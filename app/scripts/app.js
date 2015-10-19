@@ -34,7 +34,8 @@ nav.init();
 parallax.init();
 hover.init();
 audio.init();
-projects.init();
+
+document.querySelector(".header__vid").play();
 
 $('img.duotone').duotone();
 //setTimeout(function(){ grid.init(); }, 1000);
