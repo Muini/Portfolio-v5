@@ -3,6 +3,13 @@
 
    <?php include('inc/header-main.php') ?>
 
+    <div class="loader">
+        <div>
+            <div>
+                <img src='img/loader.gif' class='loader__gif' alt />
+            </div>
+        </div>
+    </div>
 
     <div class="container">
 
@@ -17,6 +24,7 @@
 
             <article squary-size="<?php echo $project['size']; ?>" squary-filter="<?php echo $project['category']; ?>" class="project project--entry project-id--<?php echo $project['id']; ?>">
                 <div class="project__container">
+                    <div class="project__effect"></div>
                     <div class="project__inner">
                         <section class="project__overlay">
                             <div>
@@ -35,6 +43,11 @@
         </section>
 
         <section class="a_project">
+            <div class="a_project__close"><span></span><span></span></div>
+
+            <article class="a_project__content">
+
+            </article>
 
         </section>
 

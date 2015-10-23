@@ -41,6 +41,7 @@ var conf = {
     lib: {
       prefix: 'app/bower_components/',
       files: [
+        'history.js/scripts/bundled/html5/native.history.js',
         'jquery/dist/jquery.min.js',
         'jquery-duotone/jquery.duotone.min.js'
       ]

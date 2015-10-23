@@ -1,41 +1,50 @@
 .header{
 
     padding: 0 5%;
-    padding-top: 160px;
-
-    @media screen and (max-width: $break-tablet){
-        padding-top: 130px;
-    }
-    @media screen and (max-width: $break-mobile){
-        padding-top: 100px;
-    }
     h1{
-        font-size: 7rem;
-        color:$bg;
+        font-size: 6rem;
+        text-align: right;
+        color: rgba($darkbrown,0.2);
 
         transition: transform .3s ease, opacity .3s ease;
 
         @media screen and (max-width: $break-tablet){
             font-size: 5rem;
+            text-align: center;
         }
         @media screen and (max-width: $break-mobile){
             font-size: 3.5rem;
         }
     }
+    &__container{
+        display: block;
+        max-width: 640px;
+        margin: 0 auto;
+        position: relative;
+        padding-top: 75px;
+
+        @media screen and (max-width: $break-tablet){
+            padding-top: 120px;
+        }
+        @media screen and (max-width: $break-mobile){
+            padding-top: 100px;
+        }
+    }
     &__vid{
         background: $bg;
         margin: 0 auto;
-        *width: 50%;
         position: absolute;
-        top: -20px;
+        top: 20px;
+        left: 0;
         z-index: -1;
-        width: 600px;
-        margin-left: -300px;
+        width: 400px;
+        margin-left: -70px;
 
         @media screen and (max-width: $break-tablet){
-            top: -10px;
-            width: 440px;
-            margin-left: -220px;
+            top: 0px;
+            width: 360px;
+            margin-left: -180px;
+            left: 50%;
         }
         @media screen and (max-width: $break-mobile){
             top:0;
@@ -69,6 +78,13 @@
         &--active:after{
             width: 33% !important;
             left: 33% !important;
+        }
+
+        @media screen and (max-width: $break-tablet){
+            margin-top: 40px;
+        }
+        @media screen and (max-width: $break-mobile){
+            margin-top: 20px;
         }
     }
 }

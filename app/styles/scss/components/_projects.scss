@@ -3,12 +3,14 @@
     margin-top: 30px;
     width: 70%;
     text-align: center;
+    overflow: visible;
 
     @media screen and (max-width: $break-tablet){
         width: 80%;
     }
     @media screen and (max-width: $break-mobile){
         width: 95%;
+        margin-top: 0;
     }
 }
 
@@ -17,7 +19,7 @@
     display: none;
     padding: 50px;
     transition: height .3s ease;
-    overflow-y: hidden;
+    overflow: visible;
 
     @media screen and (max-width: $break-mobile){
         padding: 45px;
@@ -61,6 +63,24 @@
                 }
             }
         }
+    }
+    &__effect{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        opacity: 1;
+        transform: scale(1);
+
+        &--play{
+            transition: transform .6s ease-out, opacity .6s ease;
+            transform: scale(1.8);
+            opacity: 0;
+        }
+
     }
 
     &__inner{
@@ -175,4 +195,69 @@
         }
     }
 
+}
+
+.a_project{
+
+    position: fixed;
+    width: 50%;
+    top: 0;
+    left:0;
+    height: 100%;
+    background: #f8f8f8;
+    z-index: 100;
+    transition: left .6s ease-out, transform .8s ease;
+    padding: 5%;
+    transform: skewX(30deg) translateX(-150%);
+
+    &__header{
+        h1{
+            margin-bottom: 5%;
+        }
+    }
+
+    &__close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        background: #f8f8f8;
+        cursor: pointer;
+        transition: transform .3s ease;
+        @media screen and (min-width: $break-tablet){
+            display: none;
+        }
+        span{
+            display: block;
+            position: absolute;
+            top: 25px;
+            left: 9px;
+            width: 30px;
+            height: 2px;
+            background: rgba($darkbrown,0.4);
+
+            &:nth-child(1){
+                transform: rotate(45deg);
+            }
+            &:nth-child(2){
+                transform: rotate(-45deg);
+            }
+
+        }
+
+        &:hover{
+            transform: rotate(90deg);
+        }
+    }
+
+    @media screen and (max-width: $break-tablet){
+        width: 100%;
+        transform: skewX(30deg) translateX(-200%);
+    }
+
+    &--open{
+        left: 0;
+        transform: skewX(0deg) translateX(0);
+    }
 }
