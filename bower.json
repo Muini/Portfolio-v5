@@ -21,6 +21,7 @@
     "jquery": "~2.1.4",
     "jquery-duotone": "~1.2.3",
     "ionicons": "~2.0.1",
-    "history.js": "~1.8.0"
+    "history.js": "~1.8.0",
+    "jquery.nicescroll": "~3.6.0"
   }
 }

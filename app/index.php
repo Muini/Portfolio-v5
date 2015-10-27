@@ -42,6 +42,7 @@
 
         </section>
 
+        <div class="a_project__overlay"></div>
         <section class="a_project">
             <div class="a_project__close"><span></span><span></span></div>
 

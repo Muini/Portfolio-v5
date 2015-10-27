@@ -43,7 +43,8 @@ var conf = {
       files: [
         'history.js/scripts/bundled/html5/native.history.js',
         'jquery/dist/jquery.min.js',
-        'jquery-duotone/jquery.duotone.min.js'
+        'jquery-duotone/jquery.duotone.min.js',
+        'jquery.nicescroll/dist/jquery.nicescroll.min.js'
       ]
     },
     custom: {

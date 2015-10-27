@@ -5,7 +5,7 @@
             <video class="header__vid" preload="auto">
                 <source src="video/logo-flach.mp4" type="video/mp4" />
             </video>
-            <h1 class="">Corentin</h1>
+            <h1 class="shadowed">FLACH Corentin</h1>
             <h2 class="header__desc">Storytelling - Motion Design - Front-end development</h2>
             <nav class="header__nav">
                 <ul>

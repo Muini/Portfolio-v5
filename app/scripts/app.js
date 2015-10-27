@@ -16,6 +16,19 @@ audio.init();
 projects.init();
 
 $(document).ready(function() {
+
+    //Init scroll
+    $("html").niceScroll({
+        cursorcolor: "#3c1e00",
+        cursoropacitymax: 0.5
+    });
+    /*
+    $(".a_project").niceScroll({
+        cursorcolor: "#3c1e00",
+        cursoropacitymax: 0,
+        autohidemode: "hidden"
+    });*/
+
     function finishInit(){
         //audio.playMusic("sound/65daysofstatic_-_Drone_Not_Drones.mp3");
         console.log('%c Welcome on my folio !','background: #f1f1f1; color: #3c1e00');

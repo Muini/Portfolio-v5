@@ -22,12 +22,21 @@ body {
 }
 p {
     font-family: "Open Sans", sans-serif;
-    line-height: 2.1rem;
+    line-height: 2em;
     font-weight: 400;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     letter-spacing: 0.05em;
+    font-size: 1.6rem;
+    text-align: left;
+    max-width: 640px;
     //text-shadow: 0.03em 0.03em 0 rgba(255,50,0,0.8), -0.03em -0.03em 0 rgba(255,200,0,0.8);
+    @media screen and (max-width: $break-tablet){
+        font-size: 1.5rem;
+    }
+    @media screen and (max-width: $break-mobile){
+        font-size: 1.3rem;
+    }
 }
 
 h1,h2,h3,h4,h5{
@@ -69,6 +78,7 @@ h2{
 }
 
 a,a:active,a:visited {
+    color: rgba($darkbrown,0.8);
     position: relative;
     text-decoration: none;
     transition: all .3s ease;
@@ -90,13 +100,14 @@ a,a:active,a:visited {
         transition: width .05s ease, left .05s ease;
     }
     &:hover{
+        color: rgba($darkbrown,1);
         transition: all 0s ease;
     }
 }
 
 .shadowed{
     //&:hover{
-    color:rgb(230,230,230);
+    color: $bg !important;
     text-shadow: 0 -0.04em 0px rgba(255,255,255,1), //Light
     0 0 0.2em rgba($darkbrown,0.4), //AO
     0 0.05em 0 rgba($darkbrown,0.1), //Shadow
@@ -122,6 +133,5 @@ audio{
 }
 
 .container{
-    *padding-top: 40px;
-    overflow-x: hidden;
+    overflow: hidden;
 }

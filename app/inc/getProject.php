@@ -10,19 +10,21 @@
     <p class="a_project__desc"><?php echo $project['desc']; ?></p>
 </header>
 <section class="a_project__main">
-    <?php if( $project['videoSrc'] != NULL ): ?>
+    <?php if( $project['videoSrc'] != "" ): ?>
         <video>
 
         </video>
     <?php endif; ?>
     <?php if( count($project['photos']) > 0 ): ?>
         <ul class="a_gallery">
-            <li><img src alt></li>
-            <li><img src alt></li>
-            <li><img src alt></li>
+            <?php foreach($project['photos'] as $projectImg): ?>
+            <li><img src="/img/projects/<?php echo $projectImg ?>" alt></li>
+            <?php endforeach; ?>
         </ul>
     <?php endif; ?>
 </section>
 <footer class="a_project__footer">
-    <a target="_blank" href="<?php echo $project['url']; ?>">See the project</a>
+    <?php if( $project['url'] != "" ): ?>
+        <a target="_blank" href="<?php echo $project['url']; ?>">See the project</a>
+    <?php endif; ?>
 </footer>

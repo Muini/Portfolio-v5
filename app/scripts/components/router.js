@@ -4,7 +4,7 @@ var router = {
         var it = this;
         //Bind the page changes
         History.Adapter.bind(window,'statechange',function(){
-            it.goto();
+            it.check();
         });
         //Dispose loader & play animations
         var loader = document.querySelector('.loader');
@@ -13,9 +13,9 @@ var router = {
         document.querySelector(".header__vid").play();
 
         //Open project if necessary
-        it.goto();
+        it.check();
     },
-    goto: function(){
+    check: function(){
         //Get the project index
         var index = History.getState().hash;
 
