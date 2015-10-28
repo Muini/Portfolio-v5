@@ -104,20 +104,20 @@
             WebFontConfig = {
               custom: {
                 families: ['Baron Neue:n8,n7,n4'],
-                urls: ['../styles/production.min.css']
+                urls: ['./styles/production.min.css']
               },
               google: {
                 families: ['Open Sans:300,400,600', 'Antic Slab:400']
                 //families: ['Open Sans:300,400,600']
               },
               loading: function(){
-                console.log('All fonts have been requested.')
+                //console.log('All fonts have been requested.')
               },
               active: function(){
-                console.log('All fonts loaded correctly.');
+                //console.log('All fonts loaded correctly.');
               },
               inactive: function(){
-                console.log('Something wrong with the font loader.');
+                //console.log('Something wrong with the font loader.');
               },
               timeout: 3000
             };

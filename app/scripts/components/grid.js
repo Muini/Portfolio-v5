@@ -28,7 +28,7 @@ var grid = {
 
             var name = $(this).find("h1").html();
 
-            History.pushState({state:index}, "Corentin Flach • "+name, "/?project="+index);
+            History.pushState({state:index}, "Corentin Flach • "+name, "?project="+index);
 
         });
 

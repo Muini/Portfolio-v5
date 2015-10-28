@@ -18,13 +18,13 @@
     <?php if( count($project['photos']) > 0 ): ?>
         <ul class="a_gallery">
             <?php foreach($project['photos'] as $projectImg): ?>
-            <li><img src="/img/projects/<?php echo $projectImg ?>" alt></li>
+            <li><img src="img/projects/<?php echo $projectImg ?>" alt></li>
             <?php endforeach; ?>
         </ul>
     <?php endif; ?>
 </section>
 <footer class="a_project__footer">
     <?php if( $project['url'] != "" ): ?>
-        <a target="_blank" href="<?php echo $project['url']; ?>">See the project</a>
+        <a class="a_project__link" target="_blank" href="<?php echo $project['url']; ?>">See the project</a>
     <?php endif; ?>
 </footer>

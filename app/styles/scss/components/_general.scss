@@ -78,26 +78,37 @@ h2{
 }
 
 a,a:active,a:visited {
+    display: inline-block;
     color: rgba($darkbrown,0.8);
     position: relative;
     text-decoration: none;
     transition: all .3s ease;
     cursor: pointer;
-    &:after{
+    &:after,&:before{
         content: "";
         display:block;
         position:absolute;
         width: 0%;
         height: 1px;
-        background: rgba($darkbrown,0.6);
-        left: 50%;
-        top:120%;
-        transition: width .3s ease, left .3s ease;
+        background: rgba($darkbrown,0.4);
+        left: 0;
+        top:80%;
+        transition: width .4s ease;
     }
-    &:hover:after{
-        width: 33%;
-        left: 33%;
-        transition: width .05s ease, left .05s ease;
+    &:hover:after,&:hover:before{
+        width: 100%;
+        left: inherit;
+        right: 0;
+        transition: width .2s ease;
+    }
+    &:before{
+        top: 15%;
+        left: inherit;
+        right: 0;
+    }
+    &:hover:before{
+        right: inherit;
+        left: 0;
     }
     &:hover{
         color: rgba($darkbrown,1);

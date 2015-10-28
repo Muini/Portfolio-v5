@@ -13,7 +13,7 @@
                     <li><a class="hover-sound" data-hover-sound="sound/hover.mp3" onclick="grid.it.filter('motion');">Motion</a></li>
                     <li><a class="hover-sound" data-hover-sound="sound/hover.mp3" onclick="grid.it.filter('dev');">Development</a></li>
                     <li><a class="hover-sound" data-hover-sound="sound/hover.mp3" onclick="grid.it.filter('video');">Short-film</a></li>
-                    <li><a class="hover-sound" data-hover-sound="sound/hover.mp3">About</a></li>
+                    <!--<li><a class="hover-sound" data-hover-sound="sound/hover.mp3">About</a></li>-->
                 </ul>
             </nav>
         </div>

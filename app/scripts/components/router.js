@@ -6,12 +6,6 @@ var router = {
         History.Adapter.bind(window,'statechange',function(){
             it.check();
         });
-        //Dispose loader & play animations
-        var loader = document.querySelector('.loader');
-        loader.style.display = "none";
-
-        document.querySelector(".header__vid").play();
-
         //Open project if necessary
         it.check();
     },

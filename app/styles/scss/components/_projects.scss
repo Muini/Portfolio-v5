@@ -4,6 +4,7 @@
     width: 70%;
     text-align: center;
     overflow: visible;
+    transition: height .4s ease;
 
     @media screen and (max-width: $break-tablet){
         width: 80%;
@@ -152,6 +153,7 @@
             letter-spacing: 0.1em;
             transition: transform .3s ease, opacity .3s ease;
             font-family: 'Antic Slab',serif;
+            text-align: center;
             @media screen and (max-width: $break-mobile){
                 display: none;
             }
@@ -207,8 +209,6 @@
     background: $bg-light;
     z-index: 100;
     padding: 2% 0;
-    transition: left .6s ease-out, transform .8s ease;
-    transform: skewX(30deg) translateX(-150%);
     overflow: auto;
 
     &__overlay{
@@ -228,6 +228,21 @@
         h1{
             margin-bottom: 5%;
         }
+    }
+
+    &__footer{
+        margin-bottom: 60px;
+        @media screen and (max-width: $break-mobile){
+            margin-bottom: 30px;
+        }
+    }
+    &__link{
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 1.4rem;
+        letter-spacing: 0.1em;
+        line-height: 3em;
+        text-transform: uppercase;
     }
 
     &__close{
@@ -267,12 +282,6 @@
 
     @media screen and (max-width: $break-tablet){
         width: 100%;
-        transform: skewX(30deg) translateX(-200%);
-    }
-
-    &--open{
-        left: 0;
-        transform: skewX(0deg) translateX(0);
     }
 }
 

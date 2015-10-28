@@ -79,9 +79,8 @@
                 }
             }
         }
-        &--active:after{
-            width: 33% !important;
-            left: 33% !important;
+        &--active:after, &--active:before{
+            width: 100%;
         }
 
         @media screen and (max-width: $break-tablet){
