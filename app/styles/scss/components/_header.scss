@@ -1,5 +1,6 @@
 .header{
 
+    background: linear-gradient(top, #f8f8f8, transparent);
     padding: 0 5%;
     h1{
         font-size: 6.2rem;
@@ -22,7 +23,7 @@
         max-width: 640px;
         margin: 0 auto;
         position: relative;
-        padding-top: 75px;
+        padding-top: 60px;
 
         @media screen and (max-width: $break-tablet){
             *padding-top: 120px;

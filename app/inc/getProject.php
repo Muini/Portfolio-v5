@@ -10,17 +10,17 @@
     <p class="a_project__desc"><?php echo $project['desc']; ?></p>
 </header>
 <section class="a_project__main">
-    <?php if( $project['videoSrc'] != "" ): ?>
-        <video>
-
-        </video>
-    <?php endif; ?>
     <?php if( count($project['photos']) > 0 ): ?>
         <ul class="a_gallery">
             <?php foreach($project['photos'] as $projectImg): ?>
             <li><img src="img/projects/<?php echo $projectImg ?>" alt></li>
             <?php endforeach; ?>
         </ul>
+    <?php endif; ?>
+    <?php if( $project['videoSrc'] != "" ): ?>
+        <div class="a_project__video">
+
+        </div>
     <?php endif; ?>
 </section>
 <footer class="a_project__footer">

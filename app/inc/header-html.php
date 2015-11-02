@@ -48,13 +48,13 @@
         //echo $counterVal;
     ?>
     <head>
-        <script type="text/javascript">
+        <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-          ga('create', 'UA-15013305-3', 'corentinflach.fr');
+          ga('create', 'UA-15013305-9', 'auto');
           ga('send', 'pageview');
         </script>
 
@@ -69,9 +69,7 @@
         <link rel="shortcut icon" type="image/png" href="img/favico.png">
 
         <!-- SEO -->
-
         <meta name="robots" content="index,follow">
-
         <meta name="author" content="Corentin Flach">
         <meta name="keywords" content="corentin,flach,flash,flache,director,writer,photographer,photo,webmaster,site,game,video,short,actinium,studio,draw,independant,webdesign,design,videos,designer,cinema,editing,communication,storyteller,VFX,web,tv,cartoon,infographic,animation,multimedia,2d,3d,film,films,pub,pubs,publicity">
         <meta name="description" content="Storytelling with film-making, motion design, interactive &amp; creative front-end development, this is what I like and I do as french student &amp; Freelance.">
@@ -81,7 +79,7 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@CorentinFlach">
         <meta name="twitter:creator" content="@CorentinFlach">
-        <meta name="twitter:title" content="Corentin Flach • Storyteller / Motion Designer / Front-end developer">
+        <meta name="twitter:title" content="Corentin Flach • Storyteller - Motion Designer - Front-end developer">
         <meta name="twitter:description" content="Storytelling with film-making, motion design, interactive &amp; creative front-end development, this is what I like and I do as french student &amp; Freelance.">
         <meta name="twitter:image:src" content="http://corentinflach.fr/img/cover.jpg">
         <meta name="twitter:domain" content="http://corentinflach.fr/">
@@ -89,17 +87,16 @@
         <meta property="og:locale" content="en_US">
         <meta property="og:locale:alternate" content="fr_FR">
         <meta property="og:type" content="website">
-        <meta property="og:title" content="Corentin Flach • Storyteller / Motion Designer / Front-end developer">
+        <meta property="og:title" content="Corentin Flach • Storyteller - Motion Designer - Front-end developer">
         <meta property="og:description" content="Storytelling with film-making, motion design, interactive &amp; creative front-end development, this is what I like and I do as french student &amp; Freelance.">
         <meta property="og:url" content="http://corentinflach.fr/">
-        <meta property="og:site_name" content="Corentin Flach • Storyteller / Motion Designer / Front-end developer">
+        <meta property="og:site_name" content="Corentin Flach • Storyteller - Motion Designer - Front-end developer">
         <meta property="og:image" content="http://corentinflach.fr/img/cover.jpg">
         <!-- Google Plus -->
-        <meta itemprop="name" content="Corentin Flach • Storyteller / Motion Designer / Front-end developer">
+        <meta itemprop="name" content="Corentin Flach • Storyteller - Motion Designer - Front-end developer">
         <meta itemprop="description" content="Storytelling with film-making, motion design, interactive &amp; creative front-end development, this is what I like and I do as french student &amp; Freelance.">
         <meta itemprop="image" content="http://corentinflach.fr/img/cover.jpg">
         <script type="text/javascript">
-
             //Font loading
             WebFontConfig = {
               custom: {
@@ -108,25 +105,13 @@
               },
               google: {
                 families: ['Open Sans:300,400,600', 'Antic Slab:400']
-                //families: ['Open Sans:300,400,600']
-              },
-              loading: function(){
-                //console.log('All fonts have been requested.')
-              },
-              active: function(){
-                //console.log('All fonts loaded correctly.');
-              },
-              inactive: function(){
-                //console.log('Something wrong with the font loader.');
               },
               timeout: 3000
             };
-
             (function(d) {
               var wf = d.createElement('script'), s = d.scripts[0];
               wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
               s.parentNode.insertBefore(wf, s);
             })(document);
-
         </script>
 </head>

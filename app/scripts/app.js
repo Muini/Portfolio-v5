@@ -35,20 +35,32 @@ $(document).ready(function() {
 
             //Dispose loader & play animations
             var loader = document.querySelector('.loader');
-            TweenMax.to(loader,1,{opacity: 0, onComplete: function(){
+            var desc = document.querySelector('.header__desc');
+            var menu = document.querySelectorAll('.header__nav li');
+            var projects = document.querySelectorAll('.projects');
+
+            var tl = new TimelineMax({onComplete:function(){
                 loader.style.display = "none";
                 document.querySelector(".header__vid").play();
             }});
 
-            /*
-            $(".a_project").niceScroll({
-                cursorcolor: "#3c1e00",
-                cursoropacitymax: 0,
-                autohidemode: "hidden"
-            });
-            */
+            tl.add(TweenMax.to(loader,0.4,{scale: 0.95}));
 
-        },1000);
+            tl.add(TweenMax.to(loader,0.6,{opacity: 0}));
+
+            tl.add(TweenMax.from(desc,0.4,{opacity: 0, y: "20px"}));
+
+            tl.add(TweenMax.staggerFrom(menu,0.3,{opacity: 0, y: "-20px"},0.05));
+
+            tl.add(TweenMax.from(projects,1,{opacity: 0}));
+
+            //Init project scroll
+            $(".a_project__content").niceScroll({
+                cursorcolor: "#3c1e00",
+                cursoropacitymax: 0.5
+            });
+
+        },500);
     }
     grid.init(finishInit);
 });
