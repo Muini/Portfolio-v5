@@ -60,7 +60,31 @@
     h2{
         *display: none;
     }
-
+    &__socials{
+        a{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            *padding: 5px;
+            margin: 0 10px;
+            color:rgba(60,30,0,0.3);
+            font-size: 2rem;
+            text-align: center;
+            &:hover{
+                color:rgba(60,30,0,0.6);
+            }
+            &:before{
+                width: 100%;
+                left: 0%;
+                background: transparent;
+                line-height: 40px;
+            }
+            &:after{
+                left: 0%;
+                top: 100%;
+            }
+        }
+    }
     &__nav{
         *display: none;
         margin-top: 60px;

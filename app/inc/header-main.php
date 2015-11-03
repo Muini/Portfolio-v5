@@ -7,9 +7,15 @@
             </video>
             <h1 class="shadowed">FLACH Corentin</h1>
             <h2 class="header__desc">Storytelling - Motion Design - Front-end development</h2>
+            <nav class="header__socials">
+                <a href="http://twitter.com/CorentinFlach" target="_blank" class="ion-social-twitter hover-sound" data-hover-sound="sound/hover.mp3"></a>
+                <a href="http://www.linkedin.com/in/corentinflach" target="_blank" class="ion-social-linkedin hover-sound" data-hover-sound="sound/hover.mp3"></a>
+                <a href="http://www.youtube.com/user/ActiniumStudio" target="_blank" class="ion-social-youtube hover-sound" data-hover-sound="sound/hover.mp3"></a>
+                <a href="mailto:hi@corentinflach.fr" class="ion-android-mail hover-sound" data-hover-sound="sound/hover.mp3"></a>
+            </nav>
             <nav class="header__nav">
                 <ul>
-                    <li><a class="header__nav--active hover-sound" data-hover-sound="sound/hover.mp3" onclick="grid.it.filter('all');">Everything</a></li>
+                    <li><a class="header__nav--active hover-sound" data-hover-sound="sound/hover.mp3" onclick="grid.it.filter('all');">All</a></li>
                     <li><a class="hover-sound" data-hover-sound="sound/hover.mp3" onclick="grid.it.filter('motion');">Motion</a></li>
                     <li><a class="hover-sound" data-hover-sound="sound/hover.mp3" onclick="grid.it.filter('dev');">Development</a></li>
                     <li><a class="hover-sound" data-hover-sound="sound/hover.mp3" onclick="grid.it.filter('video');">Short-film</a></li>

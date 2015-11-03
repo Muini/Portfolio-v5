@@ -1,30 +1,4 @@
 .footer{
     width: 100%;
     margin-bottom: 60px;
-
-    nav{
-        a{
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            *padding: 5px;
-            margin: 0 10px;
-            color:rgba(60,30,0,0.3);
-            font-size: 2rem;
-            text-align: center;
-            &:hover{
-                color:rgba(60,30,0,0.6);
-            }
-            &:before{
-                width: 100%;
-                left: 0%;
-                background: transparent;
-                line-height: 40px;
-            }
-            &:after{
-                left: 0%;
-                top: 100%;
-            }
-        }
-    }
 }

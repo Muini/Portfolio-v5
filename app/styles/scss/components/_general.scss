@@ -67,13 +67,14 @@ h2{
     line-height: 2em;
     font-family: 'Antic Slab', serif;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
     @media screen and (max-width: $break-tablet){
         font-size: 1.6rem;
     }
     @media screen and (max-width: $break-mobile){
         font-size: 1.4rem;
+        margin-bottom: 0;
     }
 }
 

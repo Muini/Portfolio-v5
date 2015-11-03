@@ -5,22 +5,6 @@
 
     "projects": [
         {
-            "id": 14,
-            "date": "2015",
-            "title": "Ingestion Teaser",
-            "desc":
-                "This is the first teaser of a video game i'm developping called 'Ingestion'. It's done in Blender & After effects."
-            ,
-            "thumbnail": "ingestion-teaser.png",
-            "videoSrc": "",
-            "photos": [
-                "ingestion_01.jpg"
-            ],
-            "url": "",
-            "size": "2x2",
-            "category": "motion"
-        },
-        {
             "id": 13,
             "date": "2015",
             "title": "Squary.js",
@@ -28,7 +12,7 @@
                 "Squary.js is a light & fast librairy that allow you to do simple square grid system. I developed it as an experiment but decided to release it. It's used on this portfolio."
             ,
             "thumbnail": "squary.jpg",
-            "videoSrc": "",
+            "video": null,
             "photos": [
                 "squary_01.jpg"
             ],
@@ -44,7 +28,7 @@
                 "This my portfolio from early 2015. It was more an experimental portfolio to test a lots of new things. Everything is done in HTML5/CSS3 & native javascript."
             ,
             "thumbnail": "portfolio-2015.jpg",
-            "videoSrc": "",
+            "video": null,
             "photos": [
                 "portfolio-2015_01.jpg",
                 "portfolio-2015_02.jpg",
@@ -62,7 +46,10 @@
                 "This is a motion design done for the TedX of Panthéon Sorbonne. A good project to work with the talented graphist <a href='http://romainbarbier.com/' target='_blank'>Romain Barbier</a>"
             ,
             "thumbnail": "tedx.jpg",
-            "videoSrc": "http://www.youtube.com/watch?v=gW2qhvhfBV8",
+            "video": [
+                "youtube",
+                "gW2qhvhfBV8"
+            ],
             "photos": [
                 "tedx_01.jpg",
                 "tedx_02.jpg",
@@ -81,7 +68,7 @@
                 "This is a school project made in Ruby on Rails. It was a good opportunity to touch some back-end development. Designed by <a href='http://tanguy-gereec.com/' target='_blank'>Tanguy Géréec</a>"
             ,
             "thumbnail": "cinequest.jpg",
-            "videoSrc": "",
+            "video": null,
             "photos": [
                 "cinequest_01.jpg"
             ],
@@ -97,7 +84,10 @@
                 "This is a compilation of random motion design experiments."
             ,
             "thumbnail": "rand-stuff.jpg",
-            "videoSrc": "http://www.youtube.com/watch?v=NdNu_6yR6gU",
+            "video": [
+                "youtube",
+                "NdNu_6yR6gU"
+            ],
             "photos": [
                 "rand-stuff_01.jpg",
                 "rand-stuff_02.jpg",
@@ -116,7 +106,7 @@
                 "This is a datavizualisation school project representing the job employement in France by regions. A good way to learn D3JS."
             ,
             "thumbnail": "jobshaker.jpg",
-            "videoSrc": "",
+            "video": null,
             "photos": [
                 "jobshaker_01.jpg",
                 "jobshaker_02.jpg"
@@ -133,7 +123,10 @@
                 "This is a abstract motion design made for my 2014's portfolio."
             ,
             "thumbnail": "uneminute.jpg",
-            "videoSrc": "http://www.youtube.com/watch?v=_gwcpeRl1O4",
+            "video": [
+                "youtube",
+                "_gwcpeRl1O4"
+            ],
             "photos": [
                 "uneminute_01.jpg",
                 "uneminute_02.jpg",
@@ -145,23 +138,6 @@
             "category": "motion"
         },
         {
-            "id": 6,
-            "date": "2014",
-            "title": "Portfolio 2014",
-            "desc":
-                "This is my old portfolio of 2014. It was a good opportunity to learn to play with videos in website."
-            ,
-            "thumbnail": "portfolio-2014.jpg",
-            "videoSrc": "",
-            "photos": [
-                "",
-                ""
-            ],
-            "url": "http://corentinflach.fr/folio-2014/",
-            "size": "1x1",
-            "category": "dev"
-        },
-        {
             "id": 5,
             "date": "2015",
             "title": "Interseltic",
@@ -169,12 +145,18 @@
                 "This is a school short-film I directed. It was an incredible experience & challenge. Thank you team ! (Sorry it's in french)"
             ,
             "thumbnail": "interseltic.jpg",
-            "videoSrc": "https://vimeo.com/album/3264465/video/120592302",
-            "photos": [
-                "",
-                ""
+            "video": [
+                "vimeo",
+                "120592302"
             ],
-            "url": "https://vimeo.com/album/3264465/video/120592302",
+            "photos": [
+                "interseltic_01.jpg",
+                "interseltic_02.jpg",
+                "interseltic_03.jpg",
+                "interseltic_04.jpg",
+                "interseltic_05.jpg"
+            ],
+            "url": "https://vimeo.com/120592302",
             "size": "1x1",
             "category": "video"
         },
@@ -186,7 +168,10 @@
                 "This is a personnal short-film made with a friend. One of my hobbies in life. (French only)"
             ,
             "thumbnail": "sivraj.jpg",
-            "videoSrc": "http://www.youtube.com/watch?v=wLeDSSw8DYA",
+            "video": [
+                "youtube",
+                "wLeDSSw8DYA"
+            ],
             "photos": [
                 "sivraj_01.jpg",
                 "sivraj_02.jpg",
@@ -206,7 +191,10 @@
                 "This is a school short-film made in Blender. My first full 3D short !"
             ,
             "thumbnail": "herisson.jpg",
-            "videoSrc": "http://www.youtube.com/watch?v=WZgPWUAQbys",
+            "video": [
+                "youtube",
+                "WZgPWUAQbys"
+            ],
             "photos": [
                 "herisson_01.jpg",
                 "herisson_02.jpg",
@@ -225,7 +213,7 @@
                 "This is a personnal website about good short-film & webseries found on the internet. It was a good way to learn Wordpress."
             ,
             "thumbnail": "patcorn.jpg",
-            "videoSrc": "",
+            "video": null,
             "photos": [
                 "patcorn_01.jpg",
                 "patcorn_02.jpg"
@@ -242,7 +230,7 @@
                 "This is the website of the startup Slashe I worked for as intern in 2014."
             ,
             "thumbnail": "slashe.jpg",
-            "videoSrc": "",
+            "video": null,
             "photos": [
                 "slashe_01.jpg",
                 "slashe_02.jpg"
