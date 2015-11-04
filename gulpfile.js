@@ -61,7 +61,7 @@ gulp.task('styles', function () {
     .pipe(autoprefix(conf.autoprefixerConf))
     .pipe(minifyCSS({keepSpecialComments: 0, advanced: false}))
     .pipe(concat('production.min.css'))
-    .pipe(sourcemaps.write())
+    //.pipe(sourcemaps.write())
     .pipe(gulp.dest(conf.paths.dist + '/styles'))
 
   return browserSync.active ? task.pipe(reload({ stream: true })) : task;
@@ -77,7 +77,7 @@ gulp.task('scripts', function() {
     .pipe(sourcemaps.init())
     .pipe(uglify().on("error", handleError))
     .pipe(concat('production.min.js'))
-    .pipe(sourcemaps.write())
+    //.pipe(sourcemaps.write())
     .pipe(gulp.dest(conf.paths.dist + '/scripts'));
 });
 
@@ -86,7 +86,7 @@ gulp.task('html', function() {
     .pipe(include())
     .pipe(sourcemaps.init())
     .pipe(concat('index.php').on("error", handleError))
-    .pipe(sourcemaps.write())
+    //.pipe(sourcemaps.write())
     .pipe(gulp.dest(conf.paths.dist));
 });
 

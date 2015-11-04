@@ -24,7 +24,7 @@ var projects = {
         //$('html,body')[0].style.overflow = "hidden";
 
         document.querySelector('.a_project__overlay').style.display = "block";
-        TweenMax.to(document.querySelector('.a_project__overlay'), 0.3, {opacity: 1, ease:Power1.easeOut});
+        TweenMax.to(document.querySelector('.a_project__overlay'), 0.4, {skewX: '0deg', x: '0%', ease:Power1.easeOut});
 
         TweenMax.to(document.querySelector('.a_project'),1,{skewX: '0deg', x: '0%', ease:Power1.easeOut});
 
@@ -36,13 +36,18 @@ var projects = {
               url: "inc/getProject.php?index="+index
             })
             .done(function( data ) {
+                //Put data
                 projectContainer.innerHTML = data;
+
                 //Dispose loader & play animations
                 var header = projectContainer.querySelector('.a_project__header');
                 var main = projectContainer.querySelector('.a_project__main');
                 var footer = projectContainer.querySelector('.a_project__footer');
                 var gallery = projectContainer.querySelectorAll('.a_gallery img');
                 var video = projectContainer.querySelector('.a_project__video');
+
+                //Hide video if on mobile
+                if(window.innerWidth < 640){ video.style.display = "none"; }
 
                 var tl = new TimelineMax({onComplete:function(){
                     //Load the video after animations
@@ -66,7 +71,8 @@ var projects = {
         TweenMax.to(document.querySelector('.a_project'),0.8,{skewX: '20deg', x: '-150%'});
 
         //Dispose overlay
-        TweenMax.to(document.querySelector('.a_project__overlay'), 0.3, {opacity: 0,onComplete: function(){
+        TweenMax.to(document.querySelector('.a_project__overlay'), 0.6, {skewX: '-20deg', x: '150%', scale:1.1, onComplete: function(){
+            TweenMax.to(document.querySelector('.a_project__overlay'), 0, {skewX: '-20deg', x: '-150%'});
             document.querySelector('.a_project__overlay').style.display = "none";
             //$('html,body')[0].style.overflow = "auto";
         }});
@@ -78,6 +84,8 @@ var projects = {
 
     initVideo: function(video){
         if(!video)
+            return;
+        if(window.innerWidth < 640)
             return;
         var videoWrapper = video.querySelector('.a_project__video__wrapper');
         var videoType = videoWrapper.getAttribute('data-video-type');

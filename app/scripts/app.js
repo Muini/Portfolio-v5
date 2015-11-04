@@ -26,7 +26,6 @@ $(document).ready(function() {
     });
 
     function finishInit(){
-
         //audio.playMusic("sound/65daysofstatic_-_Drone_Not_Drones.mp3");
         console.log('%c Welcome on my folio !','background: #f1f1f1; color: #3c1e00');
         //Little delay to not block animations
@@ -54,7 +53,7 @@ $(document).ready(function() {
             //tl.add(TweenMax.to(loader,0.4,{scale: 0.95}));
             tl.add(TweenMax.to(loader,0.4,{scaleY: 0}));
             tl.add(TweenMax.from(desc,0.4,{opacity: 0, y: "20px"}));
-            tl.add(TweenMax.staggerFrom(socials,0.3,{opacity: 0, y: "-20px"},0.05));
+            tl.add(TweenMax.staggerFrom(socials,0.3,{opacity: 0, x: "-40px"},0.05));
             tl.add(TweenMax.staggerFrom(menu,0.3,{opacity: 0, y: "-20px"},0.05));
             tl.add(TweenMax.from(projects,1,{opacity: 0}));
 

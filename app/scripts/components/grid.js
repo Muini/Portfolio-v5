@@ -15,6 +15,8 @@ var grid = {
             }    //   Callback
         );
 
+        //this.it.setTransitionTime(0.4);
+
         this.it.onClick(function(){
 
             //Open the good project
