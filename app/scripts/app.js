@@ -14,9 +14,6 @@ projects.init();
 
 $(document).ready(function() {
 
-    //Init the duotone
-    $('img.duotone').duotone();
-
     //Init scroll
     $("html").niceScroll({
         cursorcolor: "#3c1e00",

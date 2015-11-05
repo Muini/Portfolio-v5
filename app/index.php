@@ -29,7 +29,6 @@
                         <section class="project__overlay">
                             <div>
                                 <img data-parallax-distance=20 src="img/thumbnails/<?php echo $project['thumbnail']; ?>" alt="<?php echo $project['title'];  ?>" class="project__thumbnail parallax"/>
-                                <img data-parallax-distance=20 src="img/thumbnails/<?php echo $project['thumbnail']; ?>" alt="<?php echo $project['title'];  ?>" class="project__thumbnail duotone parallax" data-gradient-map="rgb(180, 174, 162) 10%, rgb(241, 241, 241) 35%" />
                                 <h1 class=""><?php echo $project['title']; ?></h1>
                                 <p class=""><?php echo $project['date']; ?></p>
                             </div>

@@ -3,7 +3,6 @@ var parallax = {
     them: null,
 
     init: function(){
-        return false;
 
         this.them = document.querySelectorAll(".parallax");
 

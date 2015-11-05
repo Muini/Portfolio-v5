@@ -23,8 +23,10 @@ var projects = {
 
         //$('html,body')[0].style.overflow = "hidden";
 
-        document.querySelector('.a_project__overlay').style.display = "block";
-        TweenMax.to(document.querySelector('.a_project__overlay'), 0.4, {skewX: '0deg', x: '0%', ease:Power1.easeOut});
+        if(window.innerWidth > 1024){
+            document.querySelector('.a_project__overlay').style.display = "block";
+            TweenMax.to(document.querySelector('.a_project__overlay'), 0.4, {skewX: '0deg', x: '0%', ease:Power1.easeOut});
+        }
 
         TweenMax.to(document.querySelector('.a_project'),1,{skewX: '0deg', x: '0%', ease:Power1.easeOut});
 
@@ -71,11 +73,13 @@ var projects = {
         TweenMax.to(document.querySelector('.a_project'),0.8,{skewX: '20deg', x: '-150%'});
 
         //Dispose overlay
-        TweenMax.to(document.querySelector('.a_project__overlay'), 0.6, {skewX: '-20deg', x: '150%', scale:1.1, onComplete: function(){
-            TweenMax.to(document.querySelector('.a_project__overlay'), 0, {skewX: '-20deg', x: '-150%'});
-            document.querySelector('.a_project__overlay').style.display = "none";
-            //$('html,body')[0].style.overflow = "auto";
-        }});
+        if(window.innerWidth > 1024){
+            TweenMax.to(document.querySelector('.a_project__overlay'), 0.6, {skewX: '-20deg', x: '150%', scale:1.1, onComplete: function(){
+                TweenMax.to(document.querySelector('.a_project__overlay'), 0, {skewX: '-20deg', x: '-150%'});
+                document.querySelector('.a_project__overlay').style.display = "none";
+                //$('html,body')[0].style.overflow = "auto";
+            }});
+        }
     },
 
     checkExisting: function(index){
