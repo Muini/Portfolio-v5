@@ -231,7 +231,8 @@
         height: 0;
         padding-bottom: 56.5%;
         &__wrapper{
-            background: rgba($darkbrown, 0.1);
+            *background: rgba($darkbrown, 0.1);
+            background: $bg;
             position: absolute;
             top: 0;
             left: 0;

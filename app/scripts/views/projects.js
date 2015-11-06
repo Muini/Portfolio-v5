@@ -10,6 +10,12 @@ var projects = {
             audio.playHover("sound/electicity_spark.mp3");
             History.pushState(null, "Corentin Flach • Storyteller - Motion Designer - Front-end developer", location.pathname);
         });
+        $(document).keyup(function(e) {
+            if (e.keyCode == 27) { // escape key
+                audio.playHover("sound/electicity_spark.mp3");
+                History.pushState(null, "Corentin Flach • Storyteller - Motion Designer - Front-end developer", location.pathname);
+            }
+        });
     },
 
     open: function(index){
@@ -55,13 +61,13 @@ var projects = {
                     //Load the video after animations
                     self.initVideo(video);
                 }});
-                tl.add(TweenMax.from(header,0.3,{opacity: 0, y: "20px"}));
-                tl.add(TweenMax.from(main,0.1,{opacity: 0, y: "20px"}));
+                tl.add(TweenMax.from(header,0.4,{opacity: 0, y: "20px", ease:Power1.easeOut}));
+                tl.add(TweenMax.from(main,0.2,{opacity: 0, y: "20px", ease:Power1.easeOut}));
                 if(video){
                     tl.add(TweenMax.from(video,0.3,{opacity: 0, onComplete:function(){}}));
                 }
-                tl.add(TweenMax.staggerFrom(gallery,0.3,{x: "-100%", ease:Power1.easeOut},0.1));
-                tl.add(TweenMax.from(footer,0.1,{opacity: 0, y: "20px"}));
+                tl.add(TweenMax.staggerFrom(gallery,0.4,{x: "-100%", ease:Power1.easeOut},0.1));
+                tl.add(TweenMax.from(footer,0.3,{opacity: 0, y: "20px"}));
             });
         }
     },

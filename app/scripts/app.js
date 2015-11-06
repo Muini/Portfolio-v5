@@ -48,10 +48,10 @@ $(document).ready(function() {
             }});
 
             //tl.add(TweenMax.to(loader,0.4,{scale: 0.95}));
-            tl.add(TweenMax.to(loader,0.4,{scaleY: 0}));
-            tl.add(TweenMax.from(desc,0.4,{opacity: 0, y: "20px"}));
-            tl.add(TweenMax.staggerFrom(socials,0.3,{opacity: 0, x: "-40px"},0.05));
-            tl.add(TweenMax.staggerFrom(menu,0.3,{opacity: 0, y: "-20px"},0.05));
+            tl.add(TweenMax.to(loader,0.8,{scaleY: 0, ease:Power2.easeInOut}));
+            tl.add(TweenMax.from(desc,0.5,{opacity: 0, y: "20px", ease:Power1.easeOut}));
+            tl.add(TweenMax.staggerFrom(socials,0.4,{opacity: 0, y: "40px", ease:Power1.easeOut},0.05));
+            tl.add(TweenMax.staggerFrom(menu,0.4,{opacity: 0, y: "-20px", ease:Power1.easeOut},0.05));
             tl.add(TweenMax.from(projects,1,{opacity: 0}));
 
             //Init project scroll
@@ -62,7 +62,7 @@ $(document).ready(function() {
                 mousescrollstep: 50
             });
 
-        },300);
+        },1000);
     }
     grid.init(finishInit);
 });
