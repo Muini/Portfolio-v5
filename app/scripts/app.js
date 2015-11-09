@@ -30,6 +30,8 @@ $(document).ready(function() {
 
             router.init();
 
+            ivy.init();
+
             audio.playHover("sound/whoosh.mp3");
 
             //Dispose loader & play animations

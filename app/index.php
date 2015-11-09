@@ -53,6 +53,9 @@
 
     </div>
 
+    <div class="ivy">
+        <canvas id="canvas" />
+    </div>
 
    <?php include('inc/footer-main.php') ?>
 

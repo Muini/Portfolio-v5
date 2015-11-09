@@ -12,6 +12,9 @@
 <header class="a_project__header">
     <h1 class=""><?php echo $project['title']; ?></h1>
     <p class="a_project__desc"><?php echo $project['desc']; ?></p>
+    <?php if( $project['url'] != "" ): ?>
+        <a class="a_project__link" target="_blank" href="<?php echo $project['url']; ?>">See the project</a>
+    <?php endif; ?>
 </header>
 <section class="a_project__main">
     <?php if( $project['video'] != null ): ?>
@@ -30,7 +33,5 @@
     <?php endif; ?>
 </section>
 <footer class="a_project__footer">
-    <?php if( $project['url'] != "" ): ?>
-        <a class="a_project__link" target="_blank" href="<?php echo $project['url']; ?>">See the project</a>
-    <?php endif; ?>
+
 </footer>
