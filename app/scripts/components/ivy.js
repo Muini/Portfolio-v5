@@ -49,14 +49,21 @@ var ivy = {
 
 
         // tree definitions
-        var x1 = window.innerWidth*0.2;
-        var y1 = 0;
-        var x2 = window.innerWidth*0.22;
-        var y2 = (window.innerHeight*0.3)/2;
+        var x1 = window.innerWidth*0.15;
+        //var y1 = 0;
+        var y1 = window.innerHeight;
+        var x2 = window.innerWidth*0.15;
+        //var y2 = (window.innerHeight*0.2)/3;
+        var y2 = (window.innerHeight*0.92);
+
+        var leavesNbr = 0;
+        var leavesMax = 220;
+        var branchesCounter = 0;
+        var maxBranches = leavesMax/10;
 
         // growing definitions
-        var angle = 0.15 * Math.PI;
-        var depth = 1000 / 200;
+        var angle = 0.2 * Math.PI;
+        var depth = 10;
         //var depth = document.querySelector('.footer__container>span').getAttribute('data-visitors') / (document.querySelector('.footer__container>span').getAttribute('data-visitors')/100);
 
         // save segments for later animation
@@ -67,7 +74,8 @@ var ivy = {
 
         // animation variables
         var nextTime=0;
-        var delay=40/depth;
+        var delay=1000/300;
+
 
         ///////////// Do stuff!
 
@@ -85,9 +93,7 @@ var ivy = {
           // animate drawing the tree
           requestAnimationFrame(animate);
         }
-        leaves.src='https://dl.dropboxusercontent.com/u/139992952/multple/leaves.png';
-
-
+        leaves.src='../img/leaves.png';
 
         ///////////// functions
 
@@ -97,39 +103,45 @@ var ivy = {
           var segment={
             x1:x1,y1:y1,
             x2:x2,y2:y2,
-            linewidth:depth,
+            linewidth:depth*0.3,
           };
+          if(leavesNbr < leavesMax){
           branches[depth].push(segment);
+          leavesNbr+=2;
 
-          if( depth > 0 ){
-            var x = x2 - x1;
-            var y = y2 - y1;
+              if( depth > 0){
+                    var x = x2 - x1;
+                    var y = y2 - y1;
 
-            var scale = 0.5 + Math.random() * 0.5;
+                    var scale = 1 - (Math.random()/10);
 
-            x *= scale;
-            y *= scale;
+                    x *= scale;
+                    y *= scale;
 
-            var xLeft = x * Math.cos( -angle ) - y * Math.sin( -angle );
-            var yLeft = x * Math.sin( -angle ) + y * Math.cos( -angle );
+                    var xLeft = x * Math.cos( -angle ) - y * Math.sin( -angle );
+                    var yLeft = x * Math.sin( -angle ) + y * Math.cos( -angle );
 
-            var xRight = x * Math.cos( +angle ) - y * Math.sin( +angle );
-            var yRight = x * Math.sin( +angle ) + y * Math.cos( +angle );
+                    var xRight = x * Math.cos( +angle ) - y * Math.sin( +angle );
+                    var yRight = x * Math.sin( +angle ) + y * Math.cos( +angle );
 
-            xLeft += x2;
-            yLeft += y2;
+                    xLeft += x2;
+                    yLeft += y2;
 
-            xRight += x2;
-            yRight += y2;
+                    xRight += x2;
+                    yRight += y2;
 
-            defineTree( x2, y2, xLeft, yLeft, angle, depth - 1 );
-            defineTree( x2, y2, xRight, yRight, angle, depth - 1 );
-          }
+                    defineTree( x2, y2, xRight, yRight, 0.1-angle, depth - 1 );
+                    if(Math.round(Math.random() * 10) > 8 && branchesCounter < maxBranches){
+                        defineTree( x2, y2, xLeft, yLeft, angle, depth - 1 );
+                        branchesCounter++;
+                    }
+                }
+            }
         }
 
         // draw 1 segment of the tree
         function drawSegment(segment){
-          context.strokeStyle = 'rgba(60,30,0,.1)';
+          context.strokeStyle = 'rgba(60,30,0,.3)';
           context.lineWidth = segment.linewidth;
           context.beginPath();
           context.moveTo( segment.x1, segment.y1 );
@@ -137,31 +149,35 @@ var ivy = {
           context.stroke();
           //
           //if(segment.linewidth==0){
-            /*
-            var dx=segment.x2-segment.x1;
-            var dy=segment.y2-segment.y1;
-            var angle=Math.atan2(dy,dx)+Math.PI/2;
-            var i=parseInt(Math.random()*2.99);
-            var j=parseInt(Math.random()*1.99);
-            context.save();
-            context.translate(segment.x2,segment.y2);
-            context.rotate(angle);
-            context.scale(.25,.25);
-            context.drawImage(leaves,127*i,142*j,127,142,-127/2,-142/2,127,142);
-            context.restore();
+            //if(leavesNbr < leavesMax){
+                var dx=segment.x2-segment.x1;
+                var dy=segment.y2-segment.y1;
+                var angle=Math.atan2(dy,dx)+Math.PI/2;
+                var i=parseInt(Math.random()*2.98);
+                var j=parseInt(Math.random()*1.98);
+                context.save();
+                context.translate(segment.x2,segment.y2);
+                context.rotate(angle);
+                context.scale((.2 * (Math.random()+0.5) * (1+(segment.linewidth / 2))),(.2 * (Math.random()+0.5) * (1+(segment.linewidth / 2))));
+                context.drawImage(leaves,127*i,142*j,127,142,-127/2,-142/2,127,142);
+                context.restore();
+                leavesNbr++;
+            //}
+            //if(leavesNbr < leavesMax){
+                var dx=segment.x2-segment.x1;
+                var dy=segment.y2-segment.y1;
+                var angle=Math.atan2(dy,dx)+Math.PI/2;
+                var i=parseInt(Math.random()*2.98);
+                var j=parseInt(Math.random()*1.89);
+                context.save();
+                context.translate((segment.x2+segment.x1)/2,(segment.y2+segment.y1)/2);
+                context.rotate(angle);
+                context.scale((.25 * (Math.random()+0.5) * (1+(segment.linewidth / 2))),(.25 * (Math.random()+0.5) * (1+(segment.linewidth / 2))));
+                context.drawImage(leaves,127*i,142*j,127,142,-127/2,-142/2,127,142);
+                context.restore();
+                leavesNbr++;
+            //}
 
-            var dx=segment.x2-segment.x1;
-            var dy=segment.y2-segment.y1;
-            var angle=Math.atan2(dy,dx)+Math.PI/2;
-            var i=parseInt(Math.random()*2.99);
-            var j=parseInt(Math.random()*1.99);
-            context.save();
-            context.translate((segment.x2+segment.x1)/2,(segment.y2+segment.y1)/2);
-            context.rotate(angle);
-            context.scale(.25,.25);
-            context.drawImage(leaves,127*i,142*j,127,142,-127/2,-142/2,127,142);
-            context.restore();
-            */
           //}
         }
 
